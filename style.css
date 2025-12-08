@@ -1,0 +1,191 @@
+:root {
+    --violet-fonce: #492260;
+    --violet-clair: #743a96;
+    --violet-moyen: #5d2d7e;
+    --doré: #d6b878;
+    --doré-clair: #e8d4a6;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+}
+
+.bg-violet-gradient {
+    background: linear-gradient(135deg,
+            var(--violet-fonce) 0%,
+            var(--violet-clair) 100%);
+}
+
+.bg-violet-gradient-horizontal {
+    background: linear-gradient(90deg,
+            var(--violet-fonce) 0%,
+            var(--violet-clair) 100%);
+}
+
+.text-doré {
+    color: var(--doré);
+}
+
+.border-doré {
+    border-color: var(--doré);
+}
+
+.bg-doré {
+    background-color: var(--doré);
+}
+
+.hover-bg-doré-clair:hover {
+    background-color: var(--doré-clair);
+}
+
+.hover\:bg-doré-clair:hover {
+    background-color: var(--doré-clair);
+}
+
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-height {
+    min-height: 85vh;
+}
+
+/* Fix pour le défilement horizontal sur mobile */
+.container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Correction spécifique pour les éléments qui dépassent */
+.max-w-4xl {
+    max-width: 100% !important;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero-height {
+        min-height: 70vh;
+    }
+
+    .section-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Correction pour mobile - force le padding */
+    .container {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .px-4 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Images responsives */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Tableaux scrollables */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Correction pour les grilles */
+    .grid {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Correction pour les éléments avec position absolue */
+    .absolute {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        display: none;
+        /* On les cache sur mobile */
+    }
+}
+
+/* Boutons accessibles sur mobile */
+button,
+a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Empêche les cercles flous de dépasser */
+.blur-xl {
+    transform: scale(0.8);
+}
+
+@media (max-width: 640px) {
+    .blur-xl {
+        transform: scale(0.6);
+        display: none;
+        /* On cache les cercles flous sur mobile */
+    }
+
+    /* Force la largeur à 100% pour tous les éléments */
+    .w-full {
+        width: 100% !important;
+    }
+
+    /* Correction pour les marges négatives */
+    .-top-6,
+    .-right-6,
+    .-bottom-6,
+    .-left-6 {
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+}
+
+/* Correction pour éviter le débordement horizontal */
+.flex {
+    max-width: 100%;
+}
+
+/* Important pour les éléments qui dépassent encore */
+@media (max-width: 767px) {
+    body>* {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    /* Force la visibilité du menu mobile quand il est actif */
+    #mobile-menu:not(.hidden) {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+}

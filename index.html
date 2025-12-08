@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>VITA CAST - Bandages Orthopédiques de Haute Qualité</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Styles personnalisés -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icone.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+  </head>
+  <body class="text-gray-800">
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-md">
+      <nav
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="images/logo.png"
+            alt="VITA CAST"
+            class="h-10 w-auto mr-3"
+            style="max-width: 150px"
+          />
+          <a
+            href="index.html"
+            class="text-xl font-bold text-violet-900 hidden sm:block"
+            >VITA CAST</a
+          >
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-violet-900 focus:outline-none"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="font-medium text-violet-900 hover:text-doré transition"
+            >Accueil</a
+          >
+          <a
+            href="about.html"
+            class="font-medium text-violet-900 hover:text-doré transition"
+            >À Propos</a
+          >
+          <a
+            href="products.html"
+            class="font-medium text-violet-900 hover:text-doré transition"
+            >Produits</a
+          >
+          <a
+            href="contact.html"
+            class="font-medium text-violet-900 hover:text-doré transition"
+            >Contact</a
+          >
+          <a
+            href="contact.html#devis"
+            class="bg-doré text-white font-medium px-5 py-2 rounded-full hover:bg-doré-clair transition"
+            >Demander un devis</a
+          >
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+        <div class="flex flex-col space-y-4 px-4 py-6">
+          <a
+            href="index.html"
+            class="font-medium text-violet-900 hover:text-doré transition py-2"
+            >Accueil</a
+          >
+          <a
+            href="about.html"
+            class="font-medium text-violet-900 hover:text-doré transition py-2"
+            >À Propos</a
+          >
+          <a
+            href="products.html"
+            class="font-medium text-violet-900 hover:text-doré transition py-2"
+            >Produits</a
+          >
+          <a
+            href="contact.html"
+            class="font-medium text-violet-900 hover:text-doré transition py-2"
+            >Contact</a
+          >
+          <a
+            href="contact.html#devis"
+            class="bg-doré text-white font-medium px-5 py-3 rounded-full text-center hover:bg-doré-clair transition"
+            >Demander un devis</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-height bg-violet-gradient flex items-center pt-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+            >
+              La nouvelle norme en matière de soins orthopédiques
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">
+              VITA CAST : Plâtres médicaux en résine de haute qualité. Certifié
+              ISO 9001.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="products.html"
+                class="bg-doré text-white font-medium px-6 py-3 rounded-full hover:bg-doré-clair transition text-center"
+              >
+                Découvrir nos produits
+              </a>
+              <a
+                href="contact.html#devis"
+                class="border-2 border-doré text-doré font-medium px-6 py-3 rounded-full hover:bg-doré/10 transition text-center"
+              >
+                Demander un devis
+              </a>
+            </div>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            class="hidden lg:block"
+          >
+            <div class="relative">
+              <!-- Suppression des cercles flous qui causent le débordement sur mobile -->
+              <div
+                class="hidden lg:block absolute -top-6 -right-6 w-48 h-48 md:w-64 md:h-64 bg-doré/20 rounded-full blur-xl"
+              ></div>
+              <div
+                class="hidden lg:block absolute -bottom-6 -left-6 w-48 h-48 md:w-64 md:h-64 bg-purple-400/20 rounded-full blur-xl"
+              ></div>
+              <div
+                class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl"
+              >
+                <div class="flex justify-center mb-6">
+                  <div
+                    class="w-16 h-16 bg-doré rounded-full flex items-center justify-center"
+                  >
+                    <i class="fas fa-award text-white text-2xl"></i>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold text-white text-center mb-4">
+                  Certifié ISO 9001:2023
+                </h3>
+                <p class="text-gray-200 text-center mb-6">
+                  Notre engagement envers l'excellence et la qualité est
+                  officiellement reconnu.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-white/10 p-3 rounded-lg text-center">
+                    <p class="text-white font-bold text-lg">4 min</p>
+                    <p class="text-gray-300 text-sm">Temps de prise</p>
+                  </div>
+                  <div class="bg-white/10 p-3 rounded-lg text-center">
+                    <p class="text-white font-bold text-lg">20 min</p>
+                    <p class="text-gray-300 text-sm">Mise en charge</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-violet-900 mb-4"
+          >
+            Nos Avantages
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Découvrez pourquoi les professionnels de santé choisissent VITA CAST
+            pour leurs besoins orthopédiques.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Avantage 1 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">Léger & Fort</h3>
+            <p class="text-gray-600">
+              Une combinaison parfaite de légèreté et de résistance pour un
+              confort optimal et une immobilisation efficace.
+            </p>
+          </div>
+
+          <!-- Avantage 2 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-wind text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">
+              Perméable à l'air
+            </h3>
+            <p class="text-gray-600">
+              Permet une circulation d'air optimale pour réduire la
+              transpiration et améliorer le confort du patient.
+            </p>
+          </div>
+
+          <!-- Avantage 3 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-x-ray text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">
+              Transparent aux Rayons X
+            </h3>
+            <p class="text-gray-600">
+              Permet une meilleure pénétration des rayons X pour des
+              radiographies de contrôle de haute qualité.
+            </p>
+          </div>
+
+          <!-- Avantage 4 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-tint-slash text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">
+              Résistant à l'humidité
+            </h3>
+            <p class="text-gray-600">
+              Résiste à l'humidité pour prévenir les mauvaises odeurs et les
+              complications liées à la transpiration.
+            </p>
+          </div>
+
+          <!-- Avantage 5 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-hand-rock text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">
+              Excellent Moulage
+            </h3>
+            <p class="text-gray-600">
+              S'adapte parfaitement aux contours du corps, même sur les
+              proéminences osseuses, sans plis ni pilures.
+            </p>
+          </div>
+
+          <!-- Avantage 6 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div
+              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-violet-900 mb-2">
+              Adhérence Supérieure
+            </h3>
+            <p class="text-gray-600">
+              Une adhérence exceptionnelle pour une fixation durable et
+              sécurisée tout au long du traitement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits en vedette -->
+    <section class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-violet-900 mb-4"
+          >
+            Nos Produits
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Découvrez notre gamme de produits orthopédiques de haute qualité.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Produit 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden"
+            data-aos="fade-right"
+          >
+            <div class="bg-violet-gradient-horizontal p-6 text-white">
+              <h3 class="text-2xl font-bold mb-2">VITA CAST</h3>
+              <p class="text-gray-200">
+                Bandage synthétique orthopédique en fibre de verre
+              </p>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-700 mb-4">
+                Bandage synthétique orthopédique fabriqué à partir d'un substrat
+                en fibre de verre imprégné de résine polyuréthane activée.
+              </p>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-violet-900 mb-2">
+                  Spécifications techniques :
+                </h4>
+                <div class="flex flex-wrap gap-4">
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                    <span class="font-medium">Temps de prise :</span> 4 minutes
+                  </div>
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                    <span class="font-medium">Mise en charge :</span> 20 minutes
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-violet-900 mb-2">
+                  Couleurs disponibles :
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <div
+                    class="w-8 h-8 bg-white border border-gray-300 rounded-full"
+                  ></div>
+                  <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
+                  <div class="w-8 h-8 bg-pink-400 rounded-full"></div>
+                  <div class="w-8 h-8 bg-orange-400 rounded-full"></div>
+                  <div class="w-8 h-8 bg-green-500 rounded-full"></div>
+                  <div class="w-8 h-8 bg-purple-500 rounded-full"></div>
+                </div>
+              </div>
+
+              <a
+                href="products.html#vita-cast"
+                class="block w-full bg-doré text-white text-center font-medium py-3 rounded-lg hover:bg-doré-clair transition"
+              >
+                Voir les détails
+              </a>
+            </div>
+          </div>
+
+          <!-- Produit 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden"
+            data-aos="fade-left"
+          >
+            <div class="bg-violet-gradient-horizontal p-6 text-white">
+              <h3 class="text-2xl font-bold mb-2">Jersey Fabric</h3>
+              <p class="text-gray-200">Protection de peau sous les plâtres</p>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-700 mb-4">
+                Première couche appliquée lors de la pose d'un plâtre médical.
+                Permet d'évacuer la transpiration du corps et protège la peau.
+              </p>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-violet-900 mb-2">
+                  Caractéristiques :
+                </h4>
+                <ul class="space-y-2">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-doré mr-2"></i>
+                    <span>Fibre 100% coton</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-doré mr-2"></i>
+                    <span>Antibactérienne</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-doré mr-2"></i>
+                    <span>Très douce au toucher</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-doré mr-2"></i>
+                    <span>Facilite la circulation de l'air</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-violet-900 mb-2">
+                  Dimensions disponibles :
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">5 cm</div>
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">7.5 cm</div>
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">10 cm</div>
+                  <div class="bg-gray-100 px-4 py-2 rounded-lg">12.5 cm</div>
+                </div>
+              </div>
+
+              <a
+                href="products.html#jersey-fabric"
+                class="block w-full bg-doré text-white text-center font-medium py-3 rounded-lg hover:bg-doré-clair transition"
+              >
+                Voir les détails
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="section-padding bg-violet-gradient">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+          <div
+            class="w-24 h-24 bg-doré rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fas fa-certificate text-white text-4xl"></i>
+          </div>
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4"
+          >
+            Certification ISO 9001:2023
+          </h2>
+          <p class="text-lg md:text-xl text-gray-200 mb-8">
+            Notre engagement envers des normes de qualité rigoureuses a été
+            officiellement reconnu par l'obtention de la certification ISO 9001
+            en 2023.
+          </p>
+          <p class="text-gray-300 max-w-3xl mx-auto">
+            Vitacast se positionne en tant qu'acteur majeur de l'industrie
+            médicale, spécialisé dans la production de plâtre médical en résine
+            américain et de produits médicaux et orthopédiques. Inspirée par le
+            modèle coréen, notre usine de premier plan excelle dans la
+            fabrication de plâtres médicaux en résine, incarnant qualité
+            exceptionnelle et innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12"
+          data-aos="fade-up"
+        >
+          <div class="text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-violet-900 mb-4">
+              Prêt à découvrir nos solutions orthopédiques ?
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Contactez-nous pour obtenir plus d'informations, un échantillon ou
+              un devis personnalisé.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="contact.html"
+                class="bg-doré text-white font-medium px-6 py-3 rounded-full hover:bg-doré-clair transition text-center"
+              >
+                Nous contacter
+              </a>
+              <a
+                href="contact.html#devis"
+                class="border-2 border-doré text-doré font-medium px-6 py-3 rounded-full hover:bg-doré/10 transition text-center"
+              >
+                Demander un devis
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-violet-gradient text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Logo et description -->
+          <div class="md:col-span-1">
+            <div class="flex items-center mb-4">
+              <img
+                src="images/logo.png"
+                alt="VITA CAST"
+                class="h-12 w-auto mr-3"
+                style="max-width: 180px"
+              />
+              <span class="text-xl font-bold hidden sm:block">VITA CAST</span>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Fabricant de bandages synthétiques orthopédiques de haute qualité,
+              certifié ISO 9001.
+            </p>
+            <div class="flex items-center bg-white/10 p-3 rounded-lg">
+              <i class="fas fa-certificate text-doré mr-2"></i>
+              <span class="text-sm">Certifié ISO 9001:2023</span>
+            </div>
+          </div>
+
+          <!-- Liens rapides -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-white transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-white transition"
+                  >À Propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-300 hover:text-white transition"
+                  >Produits</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Produits -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Nos Produits</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products.html#vita-cast"
+                  class="text-gray-300 hover:text-white transition"
+                  >VITA CAST Bandage</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#jersey-fabric"
+                  class="text-gray-300 hover:text-white transition"
+                  >Jersey Fabric</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-doré mr-3 mt-1"></i>
+                <span class="text-gray-300"
+                  >Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-doré mr-3"></i>
+                <span class="text-gray-300">(+216) 70 147 479</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-doré mr-3"></i>
+                <span class="text-gray-300">contact@vita-cast.com.tn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/20 mt-8 pt-8 text-center text-gray-300"
+        >
+          <p>&copy; Copyright VITA CAST 2025. Tous droits réservés.</p>
+          <p class="mt-2 text-sm">Matricule Fiscal : 1678042/F</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts - IMPORTANT: Un seul AOS et script.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialiser AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+
+      // Gérer le menu mobile - CORRIGÉ
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          const icon = this.querySelector("i");
+
+          // Toggle menu
+          menu.classList.toggle("hidden");
+
+          // Changer l'icône
+          if (menu.classList.contains("hidden")) {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          } else {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+          }
+        });
+
+      // Fermer le menu mobile quand on clique sur un lien
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+          document
+            .getElementById("mobile-menu-button")
+            .querySelector("i")
+            .classList.remove("fa-times");
+          document
+            .getElementById("mobile-menu-button")
+            .querySelector("i")
+            .classList.add("fa-bars");
+        });
+      });
+
+      // Gérer le scroll pour ajouter une ombre à la navbar
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 10) {
+          header.classList.add("shadow-lg");
+        } else {
+          header.classList.remove("shadow-lg");
+        }
+      });
+    </script>
+  </body>
+</html>
