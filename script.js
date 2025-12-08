@@ -79,3 +79,28 @@ function createParticle() {
 if (document.querySelector('.particles')) {
     setInterval(createParticle, 2000);
 }
+// Optimisation pour mobile
+function optimizeForMobile() {
+  const isMobile = window.innerWidth <= 768;
+  
+  if (isMobile) {
+    // Réduire les animations sur mobile
+    AOS.init({
+      duration: 500,
+      once: true,
+      offset: 50,
+      disable: function() {
+        return window.innerWidth < 768;
+      }
+    });
+    
+    // Désactiver certaines animations lourdes
+    document.querySelectorAll('.float').forEach(el => {
+      el.style.animation = 'none';
+    });
+  }
+}
+
+// Exécuter au chargement et au redimensionnement
+window.addEventListener('load', optimizeForMobile);
+window.addEventListener('resize', optimizeForMobile);

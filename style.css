@@ -38,8 +38,10 @@ body {
 /* Animated gradient background */
 .gradient-animated {
     background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 15s ease infinite;
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+        min-height: 100vh;
+        position: relative;
 }
 
 @keyframes gradientShift {
@@ -93,10 +95,17 @@ body {
 
 /* Glass morphism card */
 .glass-card {
-    background: rgba(45, 27, 78, 0.4);
+background: rgba(45, 27, 78, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(168, 85, 247, 0.2);
     box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.15);
+    position: relative;
+    z-index: 1;
+}
+.blur-3xl {
+    position: absolute !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Floating animation */
@@ -233,7 +242,9 @@ body {
 
 .section-padding {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+        padding-bottom: 5rem;
+        position: relative;
+        overflow: hidden;
 }
 
 .hero-height {
@@ -242,9 +253,10 @@ body {
 
 /* Fix pour le défilement horizontal sur mobile */
 .container {
-    width: 100%;
+width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* Correction spécifique pour les éléments qui dépassent */
@@ -254,6 +266,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+            position: relative;
+            width: 100vw;
+        }
     .hero-height {
         min-height: 70vh;
     }
@@ -316,6 +332,14 @@ body {
         text-shadow: 0 0 5px var(--purple-neon),
             0 0 10px var(--purple-neon);
     }
+          .hero-bg,
+          .hero-bg-about,
+          .hero-bg-products,
+          .hero-bg-contact {
+              min-height: 40vh !important;
+              padding-top: 5rem;
+              padding-bottom: 3rem;
+          }
 }
 
 /* Boutons accessibles sur mobile */
@@ -348,3 +372,117 @@ a[role="button"] {
         width: 100%;
     }
 }
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ajouter dans style.css */
+.logo-header {
+    height: 60px;
+    width: auto;
+    max-width: 240px;
+    /* Basé sur le ratio 1.4:1 */
+}
+
+.logo-footer {
+    height: 70px;
+    width: auto;
+    max-width: 280px;
+}
+ .h-96 {
+     height: 24rem !important;
+ }
+
+ /* Corriger les cercles flous sur mobile */
+ .absolute>.blur-3xl {
+     display: none !important;
+ }
+ * {
+     max-width: 100%;
+ }
+ @media (min-width: 640px) {
+     .container {
+         max-width: 640px;
+     }
+ }
+
+ @media (min-width: 768px) {
+     .container {
+         max-width: 768px;
+     }
+ }
+
+ @media (min-width: 1024px) {
+     .container {
+         max-width: 1024px;
+     }
+ }
+
+ @media (min-width: 1280px) {
+     .container {
+         max-width: 1280px;
+     }
+ }
+ /* Dans chaque page, remplacer les styles existants des hero-bg */
+
+ .hero-bg {
+     min-height: 70vh;
+ }
+
+ @media (max-width: 768px) {
+     .hero-bg {
+         min-height: 50vh;
+     }
+ }
+
+ .hero-bg-about,
+ .hero-bg-products,
+ .hero-bg-contact {
+     min-height: 50vh;
+ }
+
+ @media (max-width: 768px) {
+
+     .hero-bg-about,
+     .hero-bg-products,
+     .hero-bg-contact {
+         min-height: 40vh;
+     }
+ }
+ /* Dans products.html - améliorer la table responsive */
+ @media (max-width: 768px) {
+     table {
+         font-size: 0.875rem;
+     }
+
+     table td,
+     table th {
+         padding: 0.75rem 0.5rem;
+     }
+
+     .flex-wrap.gap-2 {
+         gap: 0.25rem;
+     }
+
+     .px-3.py-1 {
+         padding: 0.25rem 0.5rem;
+         font-size: 0.75rem;
+     }
+ }
+ @media (max-width: 768px) {
+     .grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+         grid-template-columns: 1fr;
+         gap: 1rem;
+     }
+
+     input,
+     textarea,
+     select {
+         font-size: 16px;
+         /* Empêcher le zoom sur iOS */
+     }
+ }
