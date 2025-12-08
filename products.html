@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Produits - VITA CAST - Bandages Orthopédiques de Haute Qualité
+    </title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icone.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+
+    <style>
+      .hero-bg-products {
+        background: linear-gradient(
+            135deg,
+            rgba(26, 11, 46, 0.95) 0%,
+            rgba(45, 27, 78, 0.9) 100%
+          ),
+          url("https://images.unsplash.com/photo-1585435557343-3b092031c6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 60vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .hero-bg-products {
+          background: linear-gradient(
+              135deg,
+              rgba(26, 11, 46, 0.95) 0%,
+              rgba(45, 27, 78, 0.9) 100%
+            ),
+            url("https://images.unsplash.com/photo-1585435557343-3b092031c6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+          background-size: cover;
+          background-position: center;
+          min-height: 50vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="gradient-animated">
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 navbar-glass">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="images/logo.png"
+            alt="VITA CAST"
+            class="h-12 w-auto"
+            style="max-width: 180px"
+          />
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-purple-300 hover:text-purple-100 focus:outline-none transition"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >ACCUEIL</a
+          >
+          <a
+            href="about.html"
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >À PROPOS</a
+          >
+          <a
+            href="products.html"
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >PRODUITS</a
+          >
+          <a
+            href="contact.html"
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >CONTACT</a
+          >
+          <a
+            href="contact.html#devis"
+            class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium px-6 py-3 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition font-futuristic text-sm tracking-wider"
+          >
+            DEVIS GRATUIT
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden navbar-glass border-t border-purple-500/20"
+      >
+        <div class="flex flex-col space-y-4 px-4 py-6">
+          <a
+            href="index.html"
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >ACCUEIL</a
+          >
+          <a
+            href="about.html"
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >À PROPOS</a
+          >
+          <a
+            href="products.html"
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >PRODUITS</a
+          >
+          <a
+            href="contact.html"
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >CONTACT</a
+          >
+          <a
+            href="contact.html#devis"
+            class="bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium px-6 py-3 rounded-full text-center hover:shadow-lg transition font-futuristic text-sm tracking-wider"
+          >
+            DEVIS GRATUIT
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section Produits -->
+    <section class="hero-bg-products flex items-center pt-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-futuristic neon-text"
+          >
+            NOS PRODUITS
+          </h1>
+          <p class="text-xl text-purple-200">
+            Découvrez notre gamme complète de solutions orthopédiques de haute
+            qualité.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produit VITA CAST -->
+    <section
+      id="vita-cast"
+      class="section-padding bg-gradient-to-b from-violet-dark to-violet-medium"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="glass-card glow-border rounded-3xl overflow-hidden"
+          data-aos="fade-up"
+        >
+          <div class="bg-gradient-to-r from-purple-600 to-cyan-600 p-8">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-white mb-2 font-futuristic"
+            >
+              VITA CAST Bandage Synthétique Orthopédique
+            </h2>
+            <p class="text-purple-100">
+              Fabriqué à partir d'un substrat en fibre de verre imprégné de
+              résine polyuréthane activée
+            </p>
+          </div>
+
+          <div class="p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Description
+                </h3>
+                <p class="text-purple-200 mb-6">
+                  Bandage synthétique orthopédique fabriqué à partir d'un
+                  substrat en fibre de verre imprégné de résine polyuréthane
+                  activée. Le tissu est extensible dans toutes les directions,
+                  ce qui le rend très confortable à utiliser. L'exposition à
+                  l'humidité rend le ruban rigide.
+                </p>
+
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Caractéristiques
+                </h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Perméable à l'air</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Facile à utiliser</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Excellent moulage</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Adhérence supérieure</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Résistant à l'humidité</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <span>Transparent aux rayons X</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Spécifications Techniques
+                </h3>
+                <div class="glass-card p-6 rounded-2xl mb-6">
+                  <div class="grid grid-cols-2 gap-4">
+                    <div
+                      class="text-center p-6 rounded-xl bg-gradient-to-br from-gold/20 to-transparent border border-gold/30"
+                    >
+                      <p class="text-4xl font-bold text-gold font-futuristic">
+                        4 min
+                      </p>
+                      <p class="text-purple-200">Temps de prise</p>
+                    </div>
+                    <div
+                      class="text-center p-6 rounded-xl bg-gradient-to-br from-cyan-500/20 to-transparent border border-cyan-500/30"
+                    >
+                      <p
+                        class="text-4xl font-bold text-cyan-400 font-futuristic"
+                      >
+                        20 min
+                      </p>
+                      <p class="text-purple-200">Mise en charge complète</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Mode d'emploi
+                </h3>
+                <ol class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <span
+                      class="bg-gold text-violet-dark rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold"
+                      >1</span
+                    >
+                    <span class="text-purple-200"
+                      >Porter des gants médicaux.</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="bg-gold text-violet-dark rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold"
+                      >2</span
+                    >
+                    <span class="text-purple-200"
+                      >Ouvrir le sachet Vita Cast à temps.</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="bg-gold text-violet-dark rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold"
+                      >3</span
+                    >
+                    <span class="text-purple-200"
+                      >Tremper Vita Cast dans l'eau (20°C à 25°C) pendant 10
+                      secondes.</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span
+                      class="bg-gold text-violet-dark rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0 font-bold"
+                      >4</span
+                    >
+                    <span class="text-purple-200"
+                      >Appliquer le bandage Vita Cast de manière spirale, sans
+                      dépasser 2 à 3 couches, modeler la contention et laisser
+                      sécher pendant 5 minutes.</span
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <!-- Tableau des tailles et couleurs -->
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                Tailles et Couleurs disponibles
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table
+                  class="min-w-full glass-card border border-purple-500/30 rounded-lg"
+                >
+                  <thead class="bg-purple-900/50">
+                    <tr>
+                      <th
+                        class="py-4 px-6 text-left font-bold text-white font-futuristic"
+                      >
+                        Largeur
+                      </th>
+                      <th
+                        class="py-4 px-6 text-left font-bold text-white font-futuristic"
+                      >
+                        Longueur
+                      </th>
+                      <th
+                        class="py-4 px-6 text-left font-bold text-white font-futuristic"
+                      >
+                        Couleurs disponibles
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-purple-500/30">
+                      <td class="py-4 px-6 text-purple-200">2" (5.0 cm)</td>
+                      <td class="py-4 px-6 text-purple-200">4 yards (3.6 m)</td>
+                      <td class="py-4 px-6">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 glass-card rounded-full text-sm text-purple-200"
+                            >Blanc</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 rounded-full text-sm"
+                            >Bleu</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-pink-400/30 border border-pink-400/50 text-pink-300 rounded-full text-sm"
+                            >Rose</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-orange-400/30 border border-orange-400/50 text-orange-300 rounded-full text-sm"
+                            >Orange</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-green-500/30 border border-green-500/50 text-green-300 rounded-full text-sm"
+                            >Vert</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-purple-500/30 border border-purple-500/50 text-purple-300 rounded-full text-sm"
+                            >Violet</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-purple-500/30">
+                      <td class="py-4 px-6 text-purple-200">3" (7.5 cm)</td>
+                      <td class="py-4 px-6 text-purple-200">4 yards (3.6 m)</td>
+                      <td class="py-4 px-6">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 glass-card rounded-full text-sm text-purple-200"
+                            >Blanc</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 rounded-full text-sm"
+                            >Bleu</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-pink-400/30 border border-pink-400/50 text-pink-300 rounded-full text-sm"
+                            >Rose</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-orange-400/30 border border-orange-400/50 text-orange-300 rounded-full text-sm"
+                            >Orange</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-green-500/30 border border-green-500/50 text-green-300 rounded-full text-sm"
+                            >Vert</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-purple-500/30">
+                      <td class="py-4 px-6 text-purple-200">4" (10.0 cm)</td>
+                      <td class="py-4 px-6 text-purple-200">4 yards (3.6 m)</td>
+                      <td class="py-4 px-6">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 glass-card rounded-full text-sm text-purple-200"
+                            >Blanc</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 rounded-full text-sm"
+                            >Bleu</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-pink-400/30 border border-pink-400/50 text-pink-300 rounded-full text-sm"
+                            >Rose</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-purple-500/30 border border-purple-500/50 text-purple-300 rounded-full text-sm"
+                            >Violet</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-purple-500/30">
+                      <td class="py-4 px-6 text-purple-200">5" (12.5 cm)</td>
+                      <td class="py-4 px-6 text-purple-200">4 yards (3.6 m)</td>
+                      <td class="py-4 px-6">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 glass-card rounded-full text-sm text-purple-200"
+                            >Blanc</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 rounded-full text-sm"
+                            >Bleu</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-green-500/30 border border-green-500/50 text-green-300 rounded-full text-sm"
+                            >Vert</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-purple-500/30">
+                      <td class="py-4 px-6 text-purple-200">6" (15.0 cm)</td>
+                      <td class="py-4 px-6 text-purple-200">4 yards (3.6 m)</td>
+                      <td class="py-4 px-6">
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 glass-card rounded-full text-sm text-purple-200"
+                            >Blanc</span
+                          >
+                          <span
+                            class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 rounded-full text-sm"
+                            >Bleu</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div
+                class="mt-6 glass-card p-4 rounded-lg border border-cyan-500/30"
+              >
+                <p class="text-cyan-300">
+                  <i class="fas fa-info-circle mr-2"></i>
+                  <strong>Conditionnement :</strong> Chaque bandage est
+                  conditionné dans un sachet spécifique unitaire. Chaque 10
+                  sachets sont emballés dans un carton.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produit Jersey Fabric -->
+    <section
+      id="jersey-fabric"
+      class="section-padding bg-gradient-to-b from-violet-medium to-violet-dark"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="glass-card glow-border rounded-3xl overflow-hidden"
+          data-aos="fade-up"
+        >
+          <div class="bg-gradient-to-r from-cyan-600 to-purple-600 p-8">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-white mb-2 font-futuristic"
+            >
+              JERSEY FABRIC
+            </h2>
+            <p class="text-purple-100">
+              Première couche appliquée lors de la pose d'un plâtre médical
+            </p>
+          </div>
+
+          <div class="p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Description
+                </h3>
+                <p class="text-purple-200 mb-6">
+                  Le Jersey Fabric est la première couche appliquée lors de la
+                  pose d'un plâtre médical. Cette couche permet d'évacuer la
+                  transpiration du corps. Le rembourrage du plâtre est enroulé
+                  par-dessus le jersey, puis la bande de fibre de verre ou de
+                  plâtre est appliquée.
+                </p>
+                <p class="text-purple-200 mb-6">
+                  Jersey pour la protection de peau sous les plâtres, résines,
+                  attèles et bandages.
+                </p>
+
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Caractéristiques
+                </h3>
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
+                    <span>Fibre 100% coton</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
+                    <span>Antibactérienne</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
+                    <span>Très douce au toucher</span>
+                  </li>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
+                    <span>Facilite la circulation de l'air</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4 font-futuristic">
+                  Dimensions disponibles
+                </h3>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div
+                    class="glass-card p-6 rounded-2xl text-center border border-gold/30"
+                  >
+                    <p class="text-4xl font-bold text-gold font-futuristic">
+                      5 cm
+                    </p>
+                    <p class="text-purple-200">Taille 2</p>
+                  </div>
+                  <div
+                    class="glass-card p-6 rounded-2xl text-center border border-cyan-500/30"
+                  >
+                    <p class="text-4xl font-bold text-cyan-400 font-futuristic">
+                      7.5 cm
+                    </p>
+                    <p class="text-purple-200">Taille 3</p>
+                  </div>
+                  <div
+                    class="glass-card p-6 rounded-2xl text-center border border-purple-500/30"
+                  >
+                    <p
+                      class="text-4xl font-bold text-purple-400 font-futuristic"
+                    >
+                      10 cm
+                    </p>
+                    <p class="text-purple-200">Taille 4</p>
+                  </div>
+                  <div
+                    class="glass-card p-6 rounded-2xl text-center border border-gold/30"
+                  >
+                    <p class="text-4xl font-bold text-gold font-futuristic">
+                      12.5 cm
+                    </p>
+                    <p class="text-purple-200">Taille 5</p>
+                  </div>
+                </div>
+
+                <div
+                  class="glass-card p-4 rounded-lg border border-green-500/30 bg-green-500/10"
+                >
+                  <h4 class="font-bold text-green-300 mb-2 font-futuristic">
+                    Avantages pour le patient
+                  </h4>
+                  <p class="text-green-200">
+                    Profitez d'un confort accru grâce à une réduction de la
+                    transpiration sous le plâtre, améliorant ainsi le bien-être
+                    global du patient et réduisant le développement d'odeurs
+                    désagréables.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="section-padding bg-gradient-to-br from-purple-900/30 to-cyan-900/30 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div
+          class="glass-card glow-border rounded-3xl p-8 md:p-12 text-center"
+          data-aos="fade-up"
+        >
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-gold/50"
+          >
+            <i class="fas fa-shopping-cart text-violet-dark text-3xl"></i>
+          </div>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-white mb-4 font-futuristic neon-text"
+          >
+            INTÉRESSÉ PAR NOS PRODUITS ?
+          </h2>
+          <p class="text-purple-200 mb-8 text-lg max-w-2xl mx-auto">
+            Demandez un devis personnalisé ou des échantillons pour tester la
+            qualité de nos produits.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="contact.html"
+              class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-8 py-4 rounded-full hover:shadow-2xl transition font-futuristic tracking-wider"
+            >
+              <i class="fas fa-envelope mr-2"></i>NOUS CONTACTER
+            </a>
+            <a
+              href="contact.html#devis"
+              class="btn-glow border-2 border-gold text-gold font-bold px-8 py-4 rounded-full hover:bg-gold hover:text-violet-dark transition font-futuristic tracking-wider"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>DEMANDER UN DEVIS
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-b from-violet-dark to-black py-12 border-t border-purple-500/20"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Logo et description -->
+          <div class="md:col-span-1">
+            <div class="flex items-center mb-4">
+              <img
+                src="images/logo.png"
+                alt="VITA CAST"
+                class="h-14 w-auto"
+                style="max-width: 200px"
+              />
+            </div>
+            <p class="text-purple-300 mb-4">
+              Fabricant de bandages synthétiques orthopédiques de haute qualité,
+              certifié ISO 9001.
+            </p>
+            <div class="glass-card p-3 rounded-lg inline-flex items-center">
+              <i class="fas fa-certificate text-gold mr-2"></i>
+              <span class="text-sm text-purple-200"
+                >Certifié ISO 9001:2023</span
+              >
+            </div>
+          </div>
+
+          <!-- Liens rapides -->
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              LIENS RAPIDES
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Accueil
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>À Propos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Produits
+                </a>
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Produits -->
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              NOS PRODUITS
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="products.html#vita-cast"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>VITA CAST
+                  Bandage
+                </a>
+              </li>
+              <li>
+                <a
+                  href="products.html#jersey-fabric"
+                  class="text-purple-300 hover:text-gold transition flex items-center"
+                >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Jersey Fabric
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              CONTACT
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start text-purple-300">
+                <i class="fas fa-map-marker-alt text-gold mr-3 mt-1"></i>
+                <span>Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse</span>
+              </li>
+              <li class="flex items-center text-purple-300">
+                <i class="fas fa-phone text-gold mr-3"></i>
+                <span>(+216) 70 147 479</span>
+              </li>
+              <li class="flex items-center text-purple-300">
+                <i class="fas fa-envelope text-gold mr-3"></i>
+                <span>contact@vita-cast.com.tn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-purple-500/20 pt-8 text-center">
+          <p class="text-purple-300">
+            &copy; Copyright VITA CAST 2025. Tous droits réservés.
+          </p>
+          <p class="mt-2 text-sm text-purple-400">
+            Matricule Fiscal : 1678042/F
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Initialiser AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>

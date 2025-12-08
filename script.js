@@ -1,4 +1,4 @@
-// Initialiser AOS
+// Initialiser AOS lib
 AOS.init({
     duration: 1000,
     once: true,
