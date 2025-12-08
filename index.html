@@ -10,7 +10,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -32,165 +32,242 @@
     <!-- Favicon -->
     <link rel="icon" href="images/icone.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+
+    <style>
+      /* Styles spécifiques pour la page d'accueil */
+      .hero-bg {
+        background: linear-gradient(
+            135deg,
+            rgba(26, 11, 46, 0.95) 0%,
+            rgba(45, 27, 78, 0.9) 100%
+          ),
+          url("https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 90vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .hero-bg {
+          background: linear-gradient(
+              135deg,
+              rgba(26, 11, 46, 0.95) 0%,
+              rgba(45, 27, 78, 0.9) 100%
+            ),
+            url("https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+          background-size: cover;
+          background-position: center;
+          min-height: 80vh;
+        }
+      }
+    </style>
   </head>
-  <body class="text-gray-800">
+  <body class="gradient-animated">
     <!-- Navigation -->
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-md">
+    <header class="fixed w-full z-50 navbar-glass">
       <nav
-        class="container mx-auto px-4 py-3 flex justify-between items-center"
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <!-- Logo -->
         <div class="flex items-center">
           <img
             src="images/logo.png"
             alt="VITA CAST"
-            class="h-10 w-auto mr-3"
-            style="max-width: 150px"
+            class="h-12 w-auto"
+            style="max-width: 180px"
           />
-          <a
-            href="index.html"
-            class="text-xl font-bold text-violet-900 hidden sm:block"
-            >VITA CAST</a
-          >
         </div>
 
         <!-- Mobile menu button -->
         <button
           id="mobile-menu-button"
-          class="md:hidden text-violet-900 focus:outline-none"
+          class="md:hidden text-purple-300 hover:text-purple-100 focus:outline-none transition"
         >
-          <i class="fas fa-bars text-xl"></i>
+          <i class="fas fa-bars text-2xl"></i>
         </button>
 
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center space-x-8">
           <a
             href="index.html"
-            class="font-medium text-violet-900 hover:text-doré transition"
-            >Accueil</a
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >ACCUEIL</a
           >
           <a
             href="about.html"
-            class="font-medium text-violet-900 hover:text-doré transition"
-            >À Propos</a
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >À PROPOS</a
           >
           <a
             href="products.html"
-            class="font-medium text-violet-900 hover:text-doré transition"
-            >Produits</a
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >PRODUITS</a
           >
           <a
             href="contact.html"
-            class="font-medium text-violet-900 hover:text-doré transition"
-            >Contact</a
+            class="font-medium text-purple-200 hover:text-gold transition font-futuristic text-sm tracking-wider"
+            >CONTACT</a
           >
           <a
             href="contact.html#devis"
-            class="bg-doré text-white font-medium px-5 py-2 rounded-full hover:bg-doré-clair transition"
-            >Demander un devis</a
+            class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium px-6 py-3 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition font-futuristic text-sm tracking-wider"
           >
+            DEVIS GRATUIT
+          </a>
         </div>
       </nav>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden navbar-glass border-t border-purple-500/20"
+      >
         <div class="flex flex-col space-y-4 px-4 py-6">
           <a
             href="index.html"
-            class="font-medium text-violet-900 hover:text-doré transition py-2"
-            >Accueil</a
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >ACCUEIL</a
           >
           <a
             href="about.html"
-            class="font-medium text-violet-900 hover:text-doré transition py-2"
-            >À Propos</a
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >À PROPOS</a
           >
           <a
             href="products.html"
-            class="font-medium text-violet-900 hover:text-doré transition py-2"
-            >Produits</a
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >PRODUITS</a
           >
           <a
             href="contact.html"
-            class="font-medium text-violet-900 hover:text-doré transition py-2"
-            >Contact</a
+            class="font-medium text-purple-200 hover:text-gold transition py-2 font-futuristic text-sm tracking-wider"
+            >CONTACT</a
           >
           <a
             href="contact.html#devis"
-            class="bg-doré text-white font-medium px-5 py-3 rounded-full text-center hover:bg-doré-clair transition"
-            >Demander un devis</a
+            class="bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium px-6 py-3 rounded-full text-center hover:shadow-lg transition font-futuristic text-sm tracking-wider"
           >
+            DEVIS GRATUIT
+          </a>
         </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-height bg-violet-gradient flex items-center pt-16">
-      <div class="container mx-auto px-4">
+    <section class="hero-bg flex items-center pt-20">
+      <!-- Particles effect -->
+      <div class="particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s"></div>
+        <div class="particle" style="left: 20%; animation-delay: 2s"></div>
+        <div class="particle" style="left: 30%; animation-delay: 4s"></div>
+        <div class="particle" style="left: 40%; animation-delay: 1s"></div>
+        <div class="particle" style="left: 50%; animation-delay: 3s"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s"></div>
+        <div class="particle" style="left: 70%; animation-delay: 2.5s"></div>
+        <div class="particle" style="left: 80%; animation-delay: 4.5s"></div>
+        <div class="particle" style="left: 90%; animation-delay: 1.5s"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right" data-aos-duration="1000">
+            <div class="mb-4">
+              <span
+                class="inline-block px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-300 text-sm font-futuristic tracking-wider"
+              >
+                <i class="fas fa-certificate mr-2"></i>ISO 9001:2023 CERTIFIÉ
+              </span>
+            </div>
             <h1
-              class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-futuristic neon-text"
             >
-              La nouvelle norme en matière de soins orthopédiques
+              LA NOUVELLE ÈRE DES SOINS ORTHOPÉDIQUES
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8">
-              VITA CAST : Plâtres médicaux en résine de haute qualité. Certifié
-              ISO 9001.
+            <p class="text-lg md:text-xl text-purple-200 mb-8 leading-relaxed">
+              VITA CAST révolutionne le traitement orthopédique avec des plâtres
+              médicaux en résine de dernière génération. Performance, confort et
+              innovation au service de la santé.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="products.html"
-                class="bg-doré text-white font-medium px-6 py-3 rounded-full hover:bg-doré-clair transition text-center"
+                class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-8 py-4 rounded-full hover:shadow-2xl hover:shadow-purple-500/50 transition text-center font-futuristic tracking-wider"
               >
-                Découvrir nos produits
+                <i class="fas fa-rocket mr-2"></i>DÉCOUVRIR
               </a>
               <a
                 href="contact.html#devis"
-                class="border-2 border-doré text-doré font-medium px-6 py-3 rounded-full hover:bg-doré/10 transition text-center"
+                class="btn-glow border-2 border-gold text-gold font-bold px-8 py-4 rounded-full hover:bg-gold hover:text-violet-dark transition text-center font-futuristic tracking-wider"
               >
-                Demander un devis
+                <i class="fas fa-paper-plane mr-2"></i>DEVIS GRATUIT
               </a>
             </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 mt-12">
+              <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-gold font-futuristic">
+                  4 min
+                </div>
+                <div class="text-xs text-purple-300 mt-1">Temps de prise</div>
+              </div>
+              <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-cyan-400 font-futuristic">
+                  20 min
+                </div>
+                <div class="text-xs text-purple-300 mt-1">Mise en charge</div>
+              </div>
+              <div class="glass-card p-4 rounded-xl text-center">
+                <div class="text-3xl font-bold text-purple-400 font-futuristic">
+                  8+
+                </div>
+                <div class="text-xs text-purple-300 mt-1">Pays</div>
+              </div>
+            </div>
           </div>
+
+          <!-- Hero image/3D element -->
           <div
             data-aos="fade-left"
             data-aos-duration="1000"
             class="hidden lg:block"
           >
-            <div class="relative">
-              <!-- Suppression des cercles flous qui causent le débordement sur mobile -->
-              <div
-                class="hidden lg:block absolute -top-6 -right-6 w-48 h-48 md:w-64 md:h-64 bg-doré/20 rounded-full blur-xl"
-              ></div>
-              <div
-                class="hidden lg:block absolute -bottom-6 -left-6 w-48 h-48 md:w-64 md:h-64 bg-purple-400/20 rounded-full blur-xl"
-              ></div>
-              <div
-                class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl"
-              >
+            <div class="relative float">
+              <div class="glass-card glow-border rounded-3xl p-8 transform">
                 <div class="flex justify-center mb-6">
                   <div
-                    class="w-16 h-16 bg-doré rounded-full flex items-center justify-center"
+                    class="w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center shadow-2xl shadow-gold/50"
                   >
-                    <i class="fas fa-award text-white text-2xl"></i>
+                    <i class="fas fa-award text-violet-dark text-4xl"></i>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold text-white text-center mb-4">
-                  Certifié ISO 9001:2023
+                <h3
+                  class="text-2xl font-bold text-white text-center mb-4 font-futuristic"
+                >
+                  CERTIFIÉ ISO 9001:2023
                 </h3>
-                <p class="text-gray-200 text-center mb-6">
-                  Notre engagement envers l'excellence et la qualité est
-                  officiellement reconnu.
+                <p class="text-purple-200 text-center mb-6">
+                  Excellence et qualité garanties. Notre engagement officiel
+                  reconnu.
                 </p>
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="bg-white/10 p-3 rounded-lg text-center">
-                    <p class="text-white font-bold text-lg">4 min</p>
-                    <p class="text-gray-300 text-sm">Temps de prise</p>
+                  <div
+                    class="bg-purple-900/30 p-4 rounded-lg text-center border border-purple-500/30"
+                  >
+                    <i
+                      class="fas fa-shield-alt text-cyan-400 text-2xl mb-2"
+                    ></i>
+                    <p class="text-white font-bold">100%</p>
+                    <p class="text-purple-300 text-xs">Qualité</p>
                   </div>
-                  <div class="bg-white/10 p-3 rounded-lg text-center">
-                    <p class="text-white font-bold text-lg">20 min</p>
-                    <p class="text-gray-300 text-sm">Mise en charge</p>
+                  <div
+                    class="bg-purple-900/30 p-4 rounded-lg text-center border border-purple-500/30"
+                  >
+                    <i class="fas fa-check-circle text-gold text-2xl mb-2"></i>
+                    <p class="text-white font-bold">Certifié</p>
+                    <p class="text-purple-300 text-xs">ISO 9001</p>
                   </div>
                 </div>
               </div>
@@ -201,15 +278,17 @@
     </section>
 
     <!-- Avantages Section -->
-    <section class="section-padding bg-gray-50">
+    <section
+      class="section-padding bg-gradient-to-b from-violet-dark to-violet-medium relative"
+    >
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12" data-aos="fade-up">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-2xl md:text-3xl lg:text-4xl font-bold text-violet-900 mb-4"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-futuristic neon-text"
           >
-            Nos Avantages
+            NOS AVANTAGES TECHNOLOGIQUES
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
+          <p class="text-purple-200 max-w-2xl mx-auto text-lg">
             Découvrez pourquoi les professionnels de santé choisissent VITA CAST
             pour leurs besoins orthopédiques.
           </p>
@@ -218,119 +297,121 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Avantage 1 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/50"
             >
-              <i class="fas fa-weight text-white text-2xl"></i>
+              <i class="fas fa-weight text-white text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">Léger & Fort</h3>
-            <p class="text-gray-600">
-              Une combinaison parfaite de légèreté et de résistance pour un
-              confort optimal et une immobilisation efficace.
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              LÉGER & RÉSISTANT
+            </h3>
+            <p class="text-purple-200">
+              Combinaison optimale de légèreté et de résistance pour un confort
+              maximal et une immobilisation efficace.
             </p>
           </div>
 
           <!-- Avantage 2 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/50"
             >
-              <i class="fas fa-wind text-white text-2xl"></i>
+              <i class="fas fa-wind text-white text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">
-              Perméable à l'air
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              PERMÉABLE À L'AIR
             </h3>
-            <p class="text-gray-600">
-              Permet une circulation d'air optimale pour réduire la
-              transpiration et améliorer le confort du patient.
+            <p class="text-purple-200">
+              Circulation d'air optimale pour réduire la transpiration et
+              améliorer le confort du patient.
             </p>
           </div>
 
           <!-- Avantage 3 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-gold/50"
             >
-              <i class="fas fa-x-ray text-white text-2xl"></i>
+              <i class="fas fa-x-ray text-violet-dark text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">
-              Transparent aux Rayons X
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              TRANSPARENT AUX RAYONS X
             </h3>
-            <p class="text-gray-600">
-              Permet une meilleure pénétration des rayons X pour des
-              radiographies de contrôle de haute qualité.
+            <p class="text-purple-200">
+              Meilleure pénétration des rayons X pour des radiographies de
+              contrôle de haute qualité.
             </p>
           </div>
 
           <!-- Avantage 4 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-gold rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/50"
             >
-              <i class="fas fa-tint-slash text-white text-2xl"></i>
+              <i class="fas fa-tint-slash text-white text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">
-              Résistant à l'humidité
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              RÉSISTANT À L'HUMIDITÉ
             </h3>
-            <p class="text-gray-600">
-              Résiste à l'humidité pour prévenir les mauvaises odeurs et les
+            <p class="text-purple-200">
+              Résiste à l'humidité pour prévenir les mauvaises odeurs et
               complications liées à la transpiration.
             </p>
           </div>
 
           <!-- Avantage 5 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="500"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-gold rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/50"
             >
-              <i class="fas fa-hand-rock text-white text-2xl"></i>
+              <i class="fas fa-hand-rock text-white text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">
-              Excellent Moulage
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              EXCELLENT MOULAGE
             </h3>
-            <p class="text-gray-600">
-              S'adapte parfaitement aux contours du corps, même sur les
-              proéminences osseuses, sans plis ni pilures.
+            <p class="text-purple-200">
+              S'adapte parfaitement aux contours du corps, sans plis ni pilures,
+              même sur les proéminences osseuses.
             </p>
           </div>
 
           <!-- Avantage 6 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            class="glass-card feature-card p-8 rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="600"
           >
             <div
-              class="w-14 h-14 bg-violet-gradient rounded-lg flex items-center justify-center mb-4"
+              class="w-16 h-16 bg-gradient-to-br from-gold to-purple-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-gold/50"
             >
-              <i class="fas fa-shield-alt text-white text-2xl"></i>
+              <i class="fas fa-shield-alt text-white text-3xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-violet-900 mb-2">
-              Adhérence Supérieure
+            <h3 class="text-xl font-bold text-white mb-3 font-futuristic">
+              ADHÉRENCE SUPÉRIEURE
             </h3>
-            <p class="text-gray-600">
-              Une adhérence exceptionnelle pour une fixation durable et
-              sécurisée tout au long du traitement.
+            <p class="text-purple-200">
+              Adhérence exceptionnelle pour une fixation durable et sécurisée
+              tout au long du traitement.
             </p>
           </div>
         </div>
@@ -338,132 +419,150 @@
     </section>
 
     <!-- Produits en vedette -->
-    <section class="section-padding">
+    <section
+      class="section-padding bg-gradient-to-b from-violet-medium to-violet-dark"
+    >
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12" data-aos="fade-up">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
-            class="text-2xl md:text-3xl lg:text-4xl font-bold text-violet-900 mb-4"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-futuristic neon-text"
           >
-            Nos Produits
+            NOS PRODUITS INNOVANTS
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Découvrez notre gamme de produits orthopédiques de haute qualité.
+          <p class="text-purple-200 max-w-2xl mx-auto text-lg">
+            Découvrez notre gamme de produits orthopédiques de haute qualité
+            certifiée ISO 9001.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <!-- Produit 1 -->
           <div
-            class="bg-white rounded-2xl shadow-xl overflow-hidden"
+            class="glass-card glow-border rounded-3xl overflow-hidden"
             data-aos="fade-right"
           >
-            <div class="bg-violet-gradient-horizontal p-6 text-white">
-              <h3 class="text-2xl font-bold mb-2">VITA CAST</h3>
-              <p class="text-gray-200">
+            <div class="bg-gradient-to-r from-purple-600 to-cyan-600 p-8">
+              <h3 class="text-3xl font-bold text-white mb-2 font-futuristic">
+                VITA CAST
+              </h3>
+              <p class="text-purple-100">
                 Bandage synthétique orthopédique en fibre de verre
               </p>
             </div>
-            <div class="p-6">
-              <p class="text-gray-700 mb-4">
+            <div class="p-8">
+              <p class="text-purple-200 mb-6">
                 Bandage synthétique orthopédique fabriqué à partir d'un substrat
                 en fibre de verre imprégné de résine polyuréthane activée.
               </p>
 
-              <div class="mb-6">
-                <h4 class="font-bold text-violet-900 mb-2">
-                  Spécifications techniques :
-                </h4>
-                <div class="flex flex-wrap gap-4">
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">
-                    <span class="font-medium">Temps de prise :</span> 4 minutes
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="glass-card p-4 rounded-xl text-center">
+                  <div class="text-3xl font-bold text-gold font-futuristic">
+                    4 min
                   </div>
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">
-                    <span class="font-medium">Mise en charge :</span> 20 minutes
+                  <div class="text-sm text-purple-300 mt-1">Temps de prise</div>
+                </div>
+                <div class="glass-card p-4 rounded-xl text-center">
+                  <div class="text-3xl font-bold text-cyan-400 font-futuristic">
+                    20 min
                   </div>
+                  <div class="text-sm text-purple-300 mt-1">Mise en charge</div>
                 </div>
               </div>
 
               <div class="mb-6">
-                <h4 class="font-bold text-violet-900 mb-2">
+                <h4 class="font-bold text-white mb-3 font-futuristic">
                   Couleurs disponibles :
                 </h4>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-3">
                   <div
-                    class="w-8 h-8 bg-white border border-gray-300 rounded-full"
+                    class="w-10 h-10 bg-white border-2 border-purple-500 rounded-full shadow-lg"
                   ></div>
-                  <div class="w-8 h-8 bg-blue-500 rounded-full"></div>
-                  <div class="w-8 h-8 bg-pink-400 rounded-full"></div>
-                  <div class="w-8 h-8 bg-orange-400 rounded-full"></div>
-                  <div class="w-8 h-8 bg-green-500 rounded-full"></div>
-                  <div class="w-8 h-8 bg-purple-500 rounded-full"></div>
+                  <div
+                    class="w-10 h-10 bg-blue-500 rounded-full shadow-lg shadow-blue-500/50"
+                  ></div>
+                  <div
+                    class="w-10 h-10 bg-pink-400 rounded-full shadow-lg shadow-pink-400/50"
+                  ></div>
+                  <div
+                    class="w-10 h-10 bg-orange-400 rounded-full shadow-lg shadow-orange-400/50"
+                  ></div>
+                  <div
+                    class="w-10 h-10 bg-green-500 rounded-full shadow-lg shadow-green-500/50"
+                  ></div>
+                  <div
+                    class="w-10 h-10 bg-purple-500 rounded-full shadow-lg shadow-purple-500/50"
+                  ></div>
                 </div>
               </div>
 
               <a
                 href="products.html#vita-cast"
-                class="block w-full bg-doré text-white text-center font-medium py-3 rounded-lg hover:bg-doré-clair transition"
+                class="btn-glow block w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center font-bold py-4 rounded-xl hover:shadow-2xl transition font-futuristic tracking-wider"
               >
-                Voir les détails
+                <i class="fas fa-arrow-right mr-2"></i>VOIR LES DÉTAILS
               </a>
             </div>
           </div>
 
           <!-- Produit 2 -->
           <div
-            class="bg-white rounded-2xl shadow-xl overflow-hidden"
+            class="glass-card glow-border rounded-3xl overflow-hidden"
             data-aos="fade-left"
           >
-            <div class="bg-violet-gradient-horizontal p-6 text-white">
-              <h3 class="text-2xl font-bold mb-2">Jersey Fabric</h3>
-              <p class="text-gray-200">Protection de peau sous les plâtres</p>
+            <div class="bg-gradient-to-r from-cyan-600 to-purple-600 p-8">
+              <h3 class="text-3xl font-bold text-white mb-2 font-futuristic">
+                JERSEY FABRIC
+              </h3>
+              <p class="text-purple-100">Protection de peau sous les plâtres</p>
             </div>
-            <div class="p-6">
-              <p class="text-gray-700 mb-4">
+            <div class="p-8">
+              <p class="text-purple-200 mb-6">
                 Première couche appliquée lors de la pose d'un plâtre médical.
-                Permet d'évacuer la transpiration du corps et protège la peau.
+                Permet d'évacuer la transpiration et protège la peau.
               </p>
 
               <div class="mb-6">
-                <h4 class="font-bold text-violet-900 mb-2">
+                <h4 class="font-bold text-white mb-3 font-futuristic">
                   Caractéristiques :
                 </h4>
-                <ul class="space-y-2">
-                  <li class="flex items-center">
-                    <i class="fas fa-check text-doré mr-2"></i>
+                <ul class="space-y-3">
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
                     <span>Fibre 100% coton</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check text-doré mr-2"></i>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
                     <span>Antibactérienne</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check text-doré mr-2"></i>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
                     <span>Très douce au toucher</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check text-doré mr-2"></i>
+                  <li class="flex items-center text-purple-200">
+                    <i class="fas fa-check text-gold mr-3"></i>
                     <span>Facilite la circulation de l'air</span>
                   </li>
                 </ul>
               </div>
 
               <div class="mb-6">
-                <h4 class="font-bold text-violet-900 mb-2">
+                <h4 class="font-bold text-white mb-3 font-futuristic">
                   Dimensions disponibles :
                 </h4>
-                <div class="flex flex-wrap gap-2">
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">5 cm</div>
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">7.5 cm</div>
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">10 cm</div>
-                  <div class="bg-gray-100 px-4 py-2 rounded-lg">12.5 cm</div>
+                <div class="flex flex-wrap gap-3">
+                  <div class="glass-card px-4 py-2 rounded-lg">5 cm</div>
+                  <div class="glass-card px-4 py-2 rounded-lg">7.5 cm</div>
+                  <div class="glass-card px-4 py-2 rounded-lg">10 cm</div>
+                  <div class="glass-card px-4 py-2 rounded-lg">12.5 cm</div>
                 </div>
               </div>
 
               <a
                 href="products.html#jersey-fabric"
-                class="block w-full bg-doré text-white text-center font-medium py-3 rounded-lg hover:bg-doré-clair transition"
+                class="btn-glow block w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-center font-bold py-4 rounded-xl hover:shadow-2xl transition font-futuristic tracking-wider"
               >
-                Voir les détails
+                <i class="fas fa-arrow-right mr-2"></i>VOIR LES DÉTAILS
               </a>
             </div>
           </div>
@@ -472,25 +571,36 @@
     </section>
 
     <!-- Certification Section -->
-    <section class="section-padding bg-violet-gradient">
-      <div class="container mx-auto px-4">
+    <section
+      class="section-padding bg-gradient-to-br from-purple-900/30 to-cyan-900/30 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
           <div
-            class="w-24 h-24 bg-doré rounded-full flex items-center justify-center mx-auto mb-6"
+            class="w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-gold/50"
           >
-            <i class="fas fa-certificate text-white text-4xl"></i>
+            <i class="fas fa-certificate text-violet-dark text-4xl"></i>
           </div>
           <h2
-            class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-futuristic neon-text"
           >
-            Certification ISO 9001:2023
+            CERTIFICATION ISO 9001:2023
           </h2>
-          <p class="text-lg md:text-xl text-gray-200 mb-8">
+          <p class="text-lg md:text-xl text-purple-200 mb-8">
             Notre engagement envers des normes de qualité rigoureuses a été
             officiellement reconnu par l'obtention de la certification ISO 9001
             en 2023.
           </p>
-          <p class="text-gray-300 max-w-3xl mx-auto">
+          <p class="text-purple-300 max-w-3xl mx-auto">
             Vitacast se positionne en tant qu'acteur majeur de l'industrie
             médicale, spécialisé dans la production de plâtre médical en résine
             américain et de produits médicaux et orthopédiques. Inspirée par le
@@ -503,205 +613,197 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section-padding bg-gray-50">
+    <section class="section-padding bg-gradient-to-b from-violet-dark to-black">
       <div class="container mx-auto px-4">
         <div
-          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12"
+          class="glass-card glow-border rounded-3xl p-8 md:p-12 text-center"
           data-aos="fade-up"
         >
-          <div class="text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-violet-900 mb-4">
-              Prêt à découvrir nos solutions orthopédiques ?
-            </h2>
-            <p class="text-gray-600 mb-8">
-              Contactez-nous pour obtenir plus d'informations, un échantillon ou
-              un devis personnalisé.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="contact.html"
-                class="bg-doré text-white font-medium px-6 py-3 rounded-full hover:bg-doré-clair transition text-center"
-              >
-                Nous contacter
-              </a>
-              <a
-                href="contact.html#devis"
-                class="border-2 border-doré text-doré font-medium px-6 py-3 rounded-full hover:bg-doré/10 transition text-center"
-              >
-                Demander un devis
-              </a>
-            </div>
+          <div
+            class="w-20 h-20 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-gold/50"
+          >
+            <i class="fas fa-rocket text-violet-dark text-3xl"></i>
+          </div>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-white mb-4 font-futuristic neon-text"
+          >
+            PRÊT À DÉCOUVRIR NOS SOLUTIONS ?
+          </h2>
+          <p class="text-purple-200 mb-8 text-lg max-w-2xl mx-auto">
+            Contactez-nous pour obtenir plus d'informations, un échantillon ou
+            un devis personnalisé.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="contact.html"
+              class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-8 py-4 rounded-full hover:shadow-2xl transition font-futuristic tracking-wider"
+            >
+              <i class="fas fa-envelope mr-2"></i>NOUS CONTACTER
+            </a>
+            <a
+              href="contact.html#devis"
+              class="btn-glow border-2 border-gold text-gold font-bold px-8 py-4 rounded-full hover:bg-gold hover:text-violet-dark transition font-futuristic tracking-wider"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>DEVIS GRATUIT
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-violet-gradient text-white">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer
+      class="bg-gradient-to-b from-violet-dark to-black py-12 border-t border-purple-500/20"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <!-- Logo et description -->
           <div class="md:col-span-1">
             <div class="flex items-center mb-4">
               <img
                 src="images/logo.png"
                 alt="VITA CAST"
-                class="h-12 w-auto mr-3"
-                style="max-width: 180px"
+                class="h-14 w-auto"
+                style="max-width: 200px"
               />
-              <span class="text-xl font-bold hidden sm:block">VITA CAST</span>
             </div>
-            <p class="text-gray-300 mb-4">
+            <p class="text-purple-300 mb-4">
               Fabricant de bandages synthétiques orthopédiques de haute qualité,
               certifié ISO 9001.
             </p>
-            <div class="flex items-center bg-white/10 p-3 rounded-lg">
-              <i class="fas fa-certificate text-doré mr-2"></i>
-              <span class="text-sm">Certifié ISO 9001:2023</span>
+            <div class="glass-card p-3 rounded-lg inline-flex items-center">
+              <i class="fas fa-certificate text-gold mr-2"></i>
+              <span class="text-sm text-purple-200"
+                >Certifié ISO 9001:2023</span
+              >
             </div>
           </div>
 
           <!-- Liens rapides -->
           <div>
-            <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              LIENS RAPIDES
+            </h3>
             <ul class="space-y-2">
               <li>
                 <a
                   href="index.html"
-                  class="text-gray-300 hover:text-white transition"
-                  >Accueil</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Accueil
+                </a>
               </li>
               <li>
                 <a
                   href="about.html"
-                  class="text-gray-300 hover:text-white transition"
-                  >À Propos</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>À Propos
+                </a>
               </li>
               <li>
                 <a
                   href="products.html"
-                  class="text-gray-300 hover:text-white transition"
-                  >Produits</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Produits
+                </a>
               </li>
               <li>
                 <a
                   href="contact.html"
-                  class="text-gray-300 hover:text-white transition"
-                  >Contact</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Contact
+                </a>
               </li>
             </ul>
           </div>
 
           <!-- Produits -->
           <div>
-            <h3 class="text-lg font-bold mb-4">Nos Produits</h3>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              NOS PRODUITS
+            </h3>
             <ul class="space-y-2">
               <li>
                 <a
                   href="products.html#vita-cast"
-                  class="text-gray-300 hover:text-white transition"
-                  >VITA CAST Bandage</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>VITA CAST
+                  Bandage
+                </a>
               </li>
               <li>
                 <a
                   href="products.html#jersey-fabric"
-                  class="text-gray-300 hover:text-white transition"
-                  >Jersey Fabric</a
+                  class="text-purple-300 hover:text-gold transition flex items-center"
                 >
+                  <i class="fas fa-chevron-right text-xs mr-2"></i>Jersey Fabric
+                </a>
               </li>
             </ul>
           </div>
 
           <!-- Contact -->
           <div>
-            <h3 class="text-lg font-bold mb-4">Contact</h3>
+            <h3 class="text-lg font-bold mb-4 text-white font-futuristic">
+              CONTACT
+            </h3>
             <ul class="space-y-3">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt text-doré mr-3 mt-1"></i>
-                <span class="text-gray-300"
-                  >Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse</span
-                >
+              <li class="flex items-start text-purple-300">
+                <i class="fas fa-map-marker-alt text-gold mr-3 mt-1"></i>
+                <span>Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse</span>
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone text-doré mr-3"></i>
-                <span class="text-gray-300">(+216) 70 147 479</span>
+              <li class="flex items-center text-purple-300">
+                <i class="fas fa-phone text-gold mr-3"></i>
+                <span>(+216) 70 147 479</span>
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope text-doré mr-3"></i>
-                <span class="text-gray-300">contact@vita-cast.com.tn</span>
+              <li class="flex items-center text-purple-300">
+                <i class="fas fa-envelope text-gold mr-3"></i>
+                <span>contact@vita-cast.com.tn</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div
-          class="border-t border-white/20 mt-8 pt-8 text-center text-gray-300"
-        >
-          <p>&copy; Copyright VITA CAST 2025. Tous droits réservés.</p>
-          <p class="mt-2 text-sm">Matricule Fiscal : 1678042/F</p>
+        <div class="border-t border-purple-500/20 pt-8 text-center">
+          <p class="text-purple-300">
+            &copy; Copyright VITA CAST 2025. Tous droits réservés.
+          </p>
+          <p class="mt-2 text-sm text-purple-400">
+            Matricule Fiscal : 1678042/F
+          </p>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts - IMPORTANT: Un seul AOS et script.js -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     <script>
       // Initialiser AOS
       AOS.init({
-        duration: 800,
+        duration: 1000,
         once: true,
         offset: 100,
       });
 
-      // Gérer le menu mobile - CORRIGÉ
-      document
-        .getElementById("mobile-menu-button")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          const icon = this.querySelector("i");
+      // Animation des particules supplémentaires
+      function createParticle() {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.animationDelay = Math.random() * 10 + "s";
+        particle.style.animationDuration = Math.random() * 10 + 10 + "s";
+        document.querySelector(".particles").appendChild(particle);
 
-          // Toggle menu
-          menu.classList.toggle("hidden");
+        setTimeout(() => particle.remove(), 20000);
+      }
 
-          // Changer l'icône
-          if (menu.classList.contains("hidden")) {
-            icon.classList.remove("fa-times");
-            icon.classList.add("fa-bars");
-          } else {
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-times");
-          }
-        });
-
-      // Fermer le menu mobile quand on clique sur un lien
-      document.querySelectorAll("#mobile-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.getElementById("mobile-menu").classList.add("hidden");
-          document
-            .getElementById("mobile-menu-button")
-            .querySelector("i")
-            .classList.remove("fa-times");
-          document
-            .getElementById("mobile-menu-button")
-            .querySelector("i")
-            .classList.add("fa-bars");
-        });
-      });
-
-      // Gérer le scroll pour ajouter une ombre à la navbar
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        if (window.scrollY > 10) {
-          header.classList.add("shadow-lg");
-        } else {
-          header.classList.remove("shadow-lg");
-        }
-      });
+      // Créer des particules périodiquement
+      setInterval(createParticle, 2000);
     </script>
   </body>
 </html>
