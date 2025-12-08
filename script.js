@@ -42,14 +42,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Gestion des formulaires (pour contact.html seulement)
-if (document.getElementById('contact-form')) {
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre message! Nous vous répondrons dans les plus brefs délais.');
-        this.reset();
-    });
-}
+
 
 if (document.getElementById('devis-form')) {
     document.getElementById('devis-form').addEventListener('submit', function(e) {

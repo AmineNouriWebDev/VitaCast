@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - VITA CAST - Bandages Orthopédiques de Haute Qualité</title>
+    <title>
+      Devis - VITA CAST - Demande de devis pour bandages orthopédiques
+    </title>
 
     <!-- Google Fonts -->
     <link
@@ -255,40 +257,53 @@
             </div>
           </div>
 
-          <!-- Formulaire de contact -->
+          <!-- Formulaire de devis uniquement -->
           <div class="lg:col-span-2" data-aos="fade-left">
             <div class="glass-card glow-border rounded-3xl p-8">
-              <h2 class="text-2xl font-bold text-white mb-2 font-futuristic">
-                ENVOYEZ-NOUS UN MESSAGE
-              </h2>
-              <p class="text-purple-200 mb-6">
-                Remplissez le formulaire ci-dessous et nous vous répondrons dans
-                les plus brefs délais.
-              </p>
+              <div class="text-center mb-8">
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-gold/50"
+                >
+                  <i class="fas fa-paper-plane text-violet-dark text-3xl"></i>
+                </div>
+                <h2
+                  class="text-3xl font-bold text-white mb-2 font-futuristic neon-text"
+                >
+                  DEMANDE DE DEVIS GRATUIT
+                </h2>
+                <p class="text-purple-200">
+                  Remplissez ce formulaire et nous vous enverrons un devis
+                  personnalisé dans les plus brefs délais.
+                </p>
+              </div>
 
-              <form id="contact-form" class="space-y-6">
+              <form id="devis-form" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label for="nom" class="block text-white font-medium mb-2"
+                    <label
+                      for="devis-nom"
+                      class="block text-white font-medium mb-2"
                       >Nom complet *</label
                     >
                     <input
                       type="text"
-                      id="nom"
-                      name="nom"
+                      id="devis-nom"
+                      name="devis-nom"
                       required
                       class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
                       placeholder="Votre nom"
                     />
                   </div>
                   <div>
-                    <label for="email" class="block text-white font-medium mb-2"
+                    <label
+                      for="devis-email"
+                      class="block text-white font-medium mb-2"
                       >Adresse email *</label
                     >
                     <input
                       type="email"
-                      id="email"
-                      name="email"
+                      id="devis-email"
+                      name="devis-email"
                       required
                       class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
                       placeholder="votre@email.com"
@@ -296,190 +311,109 @@
                   </div>
                 </div>
 
-                <div>
-                  <label for="sujet" class="block text-white font-medium mb-2"
-                    >Sujet *</label
-                  >
-                  <input
-                    type="text"
-                    id="sujet"
-                    name="sujet"
-                    required
-                    class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                    placeholder="Sujet de votre message"
-                  />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="entreprise"
+                      class="block text-white font-medium mb-2"
+                      >Entreprise / Institution</label
+                    >
+                    <input
+                      type="text"
+                      id="entreprise"
+                      name="entreprise"
+                      class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
+                      placeholder="Nom de votre entreprise"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="telephone"
+                      class="block text-white font-medium mb-2"
+                      >Téléphone *</label
+                    >
+                    <input
+                      type="tel"
+                      id="telephone"
+                      name="telephone"
+                      required
+                      class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
+                      placeholder="Votre numéro de téléphone"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label for="message" class="block text-white font-medium mb-2"
-                    >Message *</label
+                  <label class="block text-white font-medium mb-2"
+                    >Produits intéressés *</label
+                  >
+                  <div class="space-y-2">
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="vita-cast-check"
+                        name="produits"
+                        value="VITA CAST"
+                        class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
+                      />
+                      <label for="vita-cast-check" class="text-purple-200"
+                        >VITA CAST Bandage synthétique orthopédique</label
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="jersey-check"
+                        name="produits"
+                        value="Jersey Fabric"
+                        class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
+                      />
+                      <label for="jersey-check" class="text-purple-200"
+                        >Jersey Fabric</label
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="autres-check"
+                        name="produits"
+                        value="Autres"
+                        class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
+                      />
+                      <label for="autres-check" class="text-purple-200"
+                        >Autres produits</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="details" class="block text-white font-medium mb-2"
+                    >Détails de la demande *</label
                   >
                   <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
+                    id="details"
+                    name="details"
+                    rows="4"
                     required
                     class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                    placeholder="Votre message..."
+                    placeholder="Veuillez préciser les quantités, tailles, couleurs, et toute autre information pertinente..."
                   ></textarea>
                 </div>
 
-                <div>
+                <div class="text-center">
                   <button
                     type="submit"
-                    class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-6 py-3 rounded-xl hover:shadow-2xl transition font-futuristic tracking-wider"
+                    class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-8 py-4 rounded-xl hover:shadow-2xl transition font-futuristic tracking-wider"
                   >
-                    ENVOYER LE MESSAGE
+                    <i class="fas fa-paper-plane mr-2"></i>DEMANDER MON DEVIS
+                    GRATUIT
                   </button>
+                  <p class="text-purple-300 text-sm mt-4">
+                    Nous vous répondrons dans les 24 heures ouvrables.
+                  </p>
                 </div>
               </form>
-
-              <!-- Formulaire de devis -->
-              <div id="devis" class="mt-12 pt-8 border-t border-purple-500/30">
-                <h2 class="text-2xl font-bold text-white mb-2 font-futuristic">
-                  DEMANDER UN DEVIS
-                </h2>
-                <p class="text-purple-200 mb-6">
-                  Pour une demande de devis personnalisé, veuillez remplir ce
-                  formulaire.
-                </p>
-
-                <form id="devis-form" class="space-y-6">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        for="devis-nom"
-                        class="block text-white font-medium mb-2"
-                        >Nom complet *</label
-                      >
-                      <input
-                        type="text"
-                        id="devis-nom"
-                        name="devis-nom"
-                        required
-                        class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                        placeholder="Votre nom"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        for="devis-email"
-                        class="block text-white font-medium mb-2"
-                        >Adresse email *</label
-                      >
-                      <input
-                        type="email"
-                        id="devis-email"
-                        name="devis-email"
-                        required
-                        class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                        placeholder="votre@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        for="entreprise"
-                        class="block text-white font-medium mb-2"
-                        >Entreprise / Institution</label
-                      >
-                      <input
-                        type="text"
-                        id="entreprise"
-                        name="entreprise"
-                        class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                        placeholder="Nom de votre entreprise"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        for="telephone"
-                        class="block text-white font-medium mb-2"
-                        >Téléphone *</label
-                      >
-                      <input
-                        type="tel"
-                        id="telephone"
-                        name="telephone"
-                        required
-                        class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                        placeholder="Votre numéro de téléphone"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label class="block text-white font-medium mb-2"
-                      >Produits intéressés *</label
-                    >
-                    <div class="space-y-2">
-                      <div class="flex items-center">
-                        <input
-                          type="checkbox"
-                          id="vita-cast-check"
-                          name="produits"
-                          value="VITA CAST"
-                          class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
-                        />
-                        <label for="vita-cast-check" class="text-purple-200"
-                          >VITA CAST Bandage synthétique orthopédique</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          type="checkbox"
-                          id="jersey-check"
-                          name="produits"
-                          value="Jersey Fabric"
-                          class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
-                        />
-                        <label for="jersey-check" class="text-purple-200"
-                          >Jersey Fabric</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          type="checkbox"
-                          id="autres-check"
-                          name="produits"
-                          value="Autres"
-                          class="mr-3 h-5 w-5 text-gold focus:ring-gold bg-purple-900 border-purple-500 rounded"
-                        />
-                        <label for="autres-check" class="text-purple-200"
-                          >Autres produits</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      for="details"
-                      class="block text-white font-medium mb-2"
-                      >Détails de la demande *</label
-                    >
-                    <textarea
-                      id="details"
-                      name="details"
-                      rows="4"
-                      required
-                      class="w-full px-4 py-3 glass-card border border-purple-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-white placeholder-purple-400"
-                      placeholder="Veuillez préciser les quantités, tailles, couleurs, et toute autre information pertinente..."
-                    ></textarea>
-                  </div>
-
-                  <div>
-                    <button
-                      type="submit"
-                      class="btn-glow bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold px-6 py-3 rounded-xl hover:shadow-2xl transition font-futuristic tracking-wider"
-                    >
-                      DEMANDER UN DEVIS
-                    </button>
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>

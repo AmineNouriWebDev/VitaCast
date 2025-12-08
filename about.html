@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/icone.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/icone.ico" type="image/x-icon" />
+    <!-- Préchargement des drapeaux pour about.html -->
+    <link rel="preload" href="https://flagcdn.com/w320/nl.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/tr.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/ma.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/dz.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/tn.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/jo.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/eg.png" as="image" />
+    <link rel="preload" href="https://flagcdn.com/w320/ae.png" as="image" />
 
     <style>
       .hero-bg-about {
@@ -228,51 +237,131 @@
           </p>
         </div>
 
+        <!-- Remplacer cette section dans about.html -->
         <div
           class="grid grid-cols-2 md:grid-cols-4 gap-6"
           data-aos="fade-up"
           data-aos-delay="200"
         >
+          <!-- Pays-Bas -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/nl.png"
+                alt="Pays-Bas"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               PAYS-BAS
             </h4>
           </div>
+
+          <!-- Turquie -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/tr.png"
+                alt="Turquie"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               TURQUIE
             </h4>
           </div>
+
+          <!-- Maroc -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/ma.png"
+                alt="Maroc"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">MAROC</h4>
           </div>
+
+          <!-- Algérie -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/dz.png"
+                alt="Algérie"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               ALGÉRIE
             </h4>
           </div>
+
+          <!-- Tunisie -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/tn.png"
+                alt="Tunisie"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               TUNISIE
             </h4>
           </div>
+
+          <!-- Jordanie -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/jo.png"
+                alt="Jordanie"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               JORDANIE
             </h4>
           </div>
+
+          <!-- Égypte -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/eg.png"
+                alt="Égypte"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">ÉGYPTE</h4>
           </div>
+
+          <!-- Abou Dhabi (Émirats Arabes Unis) -->
           <div class="glass-card feature-card p-6 rounded-2xl text-center">
-            <i class="fas fa-flag text-gold text-4xl mb-4"></i>
+            <div
+              class="w-16 h-12 mx-auto mb-4 overflow-hidden rounded shadow-lg border border-gray-300/30"
+            >
+              <img
+                src="https://flagcdn.com/w320/ae.png"
+                alt="Abou Dhabi - Émirats Arabes Unis"
+                class="w-full h-full object-cover"
+              />
+            </div>
             <h4 class="font-bold text-lg text-white font-futuristic">
               ABOU DHABI
             </h4>

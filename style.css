@@ -486,3 +486,10 @@ body {
          /* Empêcher le zoom sur iOS */
      }
  }
+ /* Optimisation des drapeaux sur mobile */
+ @media (max-width: 768px) {
+     .feature-card .w-16 {
+         width: 3rem;
+         height: 2.25rem;
+     }
+ }
