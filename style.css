@@ -288,3 +288,58 @@ body {
         height: 120px;
     }
 }
+/* Correction pour le menu mobile */
+#mobileNav {
+    transition: all 0.3s ease;
+}
+
+/* S'assurer que le menu mobile est caché par défaut sur mobile */
+#mobileNav.hidden {
+    display: none;
+}
+
+/* S'assurer que le bouton burger est visible sur mobile */
+@media (max-width: 1023px) {
+    #mobileMenuBtn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Cache le menu sur desktop même s'il n'a pas la classe hidden */
+@media (min-width: 1024px) {
+    #mobileNav {
+        display: none !important;
+    }
+}
+
+/* Empêcher le défilement horizontal sur mobile */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    max-width: 100vw;
+}
+/* Correction du débordement horizontal sur mobile */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+@media (max-width: 1023px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    header,
+    .container,
+    section {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}

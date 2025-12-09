@@ -1,4 +1,4 @@
-// script.js - Version VITA CAST
+// script.js - Version VITA CAST - CORRIGÉ
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========== GESTION DU MENU MOBILE ==========
@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation(); // Empêche les conflits éventuels
             
+            // Basculer la classe hidden
             mobileNav.classList.toggle('hidden');
-            const icon = this.querySelector('i');
             
+            // Changer l'icône
+            const icon = this.querySelector('i');
             if (mobileNav.classList.contains('hidden')) {
                 icon.className = 'fas fa-bars';
             } else {
@@ -29,8 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(icon) icon.className = 'fas fa-bars';
             });
         });
+        
+        // Fermer le menu en cliquant en dehors (optionnel)
+        document.addEventListener('click', function(e) {
+            if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileNav.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if(icon) icon.className = 'fas fa-bars';
+            }
+        });
     }
     
+    // Le reste du code reste inchangé...
     // ========== OMBRE SUR LE HEADER AU SCROLL ==========
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
