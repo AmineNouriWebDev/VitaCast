@@ -1,4 +1,4 @@
-// script.js - Version mise à jour pour VITA CAST
+// script.js - Version VITA CAST
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========== GESTION DU MENU MOBILE ==========
@@ -6,9 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileNav = document.getElementById('mobileNav');
     
     if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', function() {
+        // Au clic sur le bouton burger
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation(); // Empêche les conflits éventuels
+            
             mobileNav.classList.toggle('hidden');
             const icon = this.querySelector('i');
+            
             if (mobileNav.classList.contains('hidden')) {
                 icon.className = 'fas fa-bars';
             } else {
@@ -20,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('#mobileNav a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.add('hidden');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                const icon = mobileMenuBtn.querySelector('i');
+                if(icon) icon.className = 'fas fa-bars';
             });
         });
     }
@@ -29,10 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         if (header) {
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 10px 30px rgba(10, 2, 15, 0.15)';
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg');
+                header.style.boxShadow = '0 10px 30px rgba(10, 2, 15, 0.3)';
             } else {
-                header.style.boxShadow = '0 4px 12px rgba(10, 2, 15, 0.1)';
+                header.classList.remove('shadow-lg');
+                header.style.boxShadow = 'none';
             }
         }
     });
@@ -46,50 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
-    
+
     // ========== ANIMATION DES CARTES AU HOVER ==========
-    const cards = document.querySelectorAll('.avantage-card, .product-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // ========== OPTIMISATION MOBILE ==========
-    function optimizeForMobile() {
-        const isMobile = window.innerWidth <= 768;
-        
-        if (isMobile) {
-            // Désactiver certaines animations lourdes sur mobile
-            document.querySelectorAll('.float-animation').forEach(el => {
-                el.style.animation = 'none';
+    // On vérifie si c'est desktop pour éviter les bugs tactiles
+    if (window.innerWidth > 768) {
+        const cards = document.querySelectorAll('.avantage-card, .product-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
             });
-        }
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
     }
-    
-    // Exécuter au chargement et au redimensionnement
-    optimizeForMobile();
-    window.addEventListener('resize', optimizeForMobile);
     
     // ========== SCROLL LISSE POUR LES ANCRES ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            if (href !== '#' && href.startsWith('#') && document.querySelector(href)) {
-                e.preventDefault();
+            if (href !== '#' && href.startsWith('#')) {
                 const target = document.querySelector(href);
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });

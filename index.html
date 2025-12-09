@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VITA CAST - Bandages Orthopédiques de Haute Qualité</title>
 
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- CSS Personnalisé -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Style inline pour les ajustements spécifiques -->
     <style>
-      /* Variables CSS avec la nouvelle couleur */
       :root {
         --violet-fonce: #0a020f;
         --violet-clair: #743a96;
@@ -43,20 +36,17 @@
     </style>
   </head>
   <body class="font-sans">
-    <!-- HEADER -->
     <header class="bg-[#0a020f] fixed w-full top-0 z-50 shadow-lg">
       <div class="container mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-          <!-- Logo -->
-          <div class="logo-container">
+        <div class="flex justify-between items-center h-16">
+          <div class="logo-container flex items-center h-full">
             <img
               src="images/logo.png"
               alt="VITA CAST"
-              class="h-10 md:h-12 w-auto invert brightness-0"
+              class="max-h-14 w-32 md:w-48 object-contain invert brightness-0"
             />
           </div>
 
-          <!-- Navigation Desktop -->
           <nav class="nav-main hidden lg:block">
             <ul class="flex items-center space-x-6">
               <li>
@@ -98,19 +88,21 @@
             </ul>
           </nav>
 
-          <!-- Bouton Menu Mobile -->
           <button
-            class="mobile-menu-btn lg:hidden text-white text-2xl"
+            class="mobile-menu-btn lg:hidden text-white text-2xl p-2 focus:outline-none"
             id="mobileMenuBtn"
+            aria-label="Menu"
           >
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </div>
 
-      <!-- Navigation Mobile -->
-      <nav class="nav-mobile hidden lg:hidden bg-[#0a020f] py-4" id="mobileNav">
-        <div class="container mx-auto px-4">
+      <nav
+        class="nav-mobile hidden lg:hidden bg-[#0a020f] border-t border-gray-800"
+        id="mobileNav"
+      >
+        <div class="container mx-auto px-4 py-4">
           <ul class="space-y-4">
             <li>
               <a
@@ -153,10 +145,8 @@
       </nav>
     </header>
 
-    <!-- HERO SECTION COMPACTE - 3 colonnes -->
-    <!-- HERO SECTION - Design mis à jour -->
     <section
-      class="hero-section relative bg-cover bg-center fade-in mt-16"
+      class="hero-section relative bg-cover bg-center fade-in mt-20"
       style="background-image: url('images/fond-header.png')"
     >
       <div class="hero-overlay"></div>
@@ -164,7 +154,6 @@
         <div
           class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8"
         >
-          <!-- Colonne 1 : Texte principal -->
           <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="800">
             <h1
               class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0a020f]"
@@ -193,14 +182,12 @@
             </div>
           </div>
 
-          <!-- Colonne 2 : Images circulaires -->
           <div
             class="lg:w-1/2 flex justify-center items-center gap-8"
             data-aos="fade-left"
             data-aos-duration="800"
             data-aos-delay="200"
           >
-            <!-- Image certification ISO (cercle sans bordure) -->
             <div
               class="hero-circle-img"
               data-aos="zoom-in"
@@ -213,7 +200,6 @@
               />
             </div>
 
-            <!-- Image produit (cercle avec bordure violette) -->
             <div
               class="hero-circle-img hero-circle-border"
               data-aos="zoom-in"
@@ -230,13 +216,10 @@
       </div>
     </section>
 
-    <!-- SECTION PRÉSENTATION (fond blanc) -->
-    <!-- SECTION PRÉSENTATION - Design amélioré -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="presentation-card max-w-6xl mx-auto" data-aos="fade-up">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Texte -->
             <div>
               <h2 class="text-3xl md:text-4xl font-bold text-[#0a020f] mb-6">
                 VITA CAST :<br />
@@ -277,7 +260,6 @@
               </div>
             </div>
 
-            <!-- Illustration/Graphique -->
             <div class="text-center">
               <div
                 class="w-64 h-64 mx-auto bg-gradient-to-br from-[#f5f0ff] to-[#e0d1ff] rounded-full flex items-center justify-center p-8"
@@ -293,7 +275,6 @@
       </div>
     </section>
 
-    <!-- SECTION AVANTAGES (fond violet clair) -->
     <section class="py-16 bg-[#f5f0ff]">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12" data-aos="fade-up">
@@ -307,7 +288,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Avantage 1 -->
           <div
             class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
             data-aos="fade-up"
@@ -328,7 +308,6 @@
             </p>
           </div>
 
-          <!-- Avantage 2 -->
           <div
             class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
             data-aos="fade-up"
@@ -348,7 +327,6 @@
             </p>
           </div>
 
-          <!-- Avantage 3 -->
           <div
             class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
             data-aos="fade-up"
@@ -371,7 +349,6 @@
       </div>
     </section>
 
-    <!-- SECTION GAMME DE PRODUITS (fond blanc) -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12" data-aos="fade-up">
@@ -385,7 +362,6 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- Produit VITA CAST -->
           <div
             class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border border-gray-200 hover:border-[#743a96] transition-all duration-300 group"
             data-aos="fade-right"
@@ -443,7 +419,6 @@
             </a>
           </div>
 
-          <!-- Produit JERSEY FABRIC -->
           <div
             class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border border-gray-200 hover:border-[#743a96] transition-all duration-300 group"
             data-aos="fade-left"
@@ -513,7 +488,6 @@
       </div>
     </section>
 
-    <!-- CTA FINAL (fond violet foncé) -->
     <section
       class="py-16 bg-gradient-to-br from-[#0a020f] to-[#3d1a5c]"
       data-aos="fade-up"
@@ -539,13 +513,11 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-[#0a020f] pt-16 pb-8">
       <div class="container mx-auto px-4">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"
         >
-          <!-- Colonne 1 -->
           <div class="footer-col">
             <img
               src="images/logo.png"
@@ -566,7 +538,6 @@
             </div>
           </div>
 
-          <!-- Colonne 2 -->
           <div class="footer-col">
             <h3 class="text-[#a78bfa] text-lg font-bold mb-6">LIENS RAPIDES</h3>
             <ul class="space-y-3">
@@ -601,7 +572,6 @@
             </ul>
           </div>
 
-          <!-- Colonne 3 -->
           <div class="footer-col">
             <h3 class="text-[#a78bfa] text-lg font-bold mb-6">PRODUITS</h3>
             <ul class="space-y-3">
@@ -622,7 +592,6 @@
             </ul>
           </div>
 
-          <!-- Colonne 4 -->
           <div class="footer-col">
             <h3 class="text-[#a78bfa] text-lg font-bold mb-6">CONTACT</h3>
             <ul class="space-y-4">
@@ -654,12 +623,10 @@
       </div>
     </footer>
 
-    <!-- SCRIPT AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- SCRIPT PERSO -->
     <script>
-      // Initialiser AOS
+      // Initialiser AOS seulement
       AOS.init({
         duration: 800,
         once: true,
@@ -667,53 +634,13 @@
         delay: 0,
       });
 
-      // Menu mobile
-      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-      const mobileNav = document.getElementById("mobileNav");
-
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileNav.classList.toggle("hidden");
-        const icon = mobileMenuBtn.querySelector("i");
-        if (mobileNav.classList.contains("hidden")) {
-          icon.className = "fas fa-bars";
-        } else {
-          icon.className = "fas fa-times";
-        }
-      });
-
-      // Fermer le menu en cliquant sur un lien
-      document.querySelectorAll("#mobileNav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileNav.classList.add("hidden");
-          mobileMenuBtn.querySelector("i").className = "fas fa-bars";
-        });
-      });
-
-      // Animation au scroll (fallback si AOS ne fonctionne pas)
+      // Animation fallback au chargement
       document.addEventListener("DOMContentLoaded", () => {
         const fadeElements = document.querySelectorAll(".fade-in");
-
-        const fadeInOnScroll = () => {
-          fadeElements.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-
-            if (elementTop < window.innerHeight - elementVisible) {
-              element.style.opacity = "1";
-              element.style.transform = "translateY(0)";
-            }
-          });
-        };
-
-        // Initial state
         fadeElements.forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(30px)";
-          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          el.style.opacity = "1";
+          el.style.transform = "translateY(0)";
         });
-
-        window.addEventListener("scroll", fadeInOnScroll);
-        fadeInOnScroll(); // Check on load
       });
     </script>
     <script src="script.js"></script>
