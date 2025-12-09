@@ -343,3 +343,150 @@ body {
         overflow-x: hidden !important;
     }
 }
+
+/* ========== AJUSTEMENTS POUR 3 IMAGES DANS LE HERO ========== */
+
+/* Réduction de la taille des images circulaires pour 3 images */
+.hero-smaller {
+    width: 160px !important;
+    height: 160px !important;
+}
+
+/* Ajustement des espacements pour 3 images */
+@media (max-width: 1024px) {
+    .hero-smaller {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-smaller {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+
+   
+}
+
+@media (max-width: 640px) {
+    .hero-smaller {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+/* Réduction légère de la taille du texte pour équilibrer */
+@media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-section p.text-lg {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-section .flex.flex-col.sm\\:flex-row.gap-4 {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .hero-section a {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+}
+
+
+
+/* Pour les très petits écrans, empiler les images si nécessaire */
+@media (max-width: 480px) {
+
+
+    .hero-smaller {
+        width: 90px !important;
+        height: 90px !important;
+    }
+}
+
+/* ========== AJUSTEMENTS POUR 3 IMAGES DANS LE HERO ========== */
+
+/* Réduction de la taille des images circulaires pour 3 images */
+.hero-smaller {
+    width: 160px !important;
+    height: 160px !important;
+}
+
+/* Ajustement des espacements pour 3 images */
+@media (max-width: 1024px) {
+    .hero-smaller {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-smaller {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    /* Correction des espacements sur mobile */
+    .hero-section .lg\\:w-1\\/2 {
+        gap: 0.75rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-smaller {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-smaller {
+        width: 90px !important;
+        height: 90px !important;
+    }
+}
+
+/* Réduction légère de la taille du texte pour équilibrer */
+@media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-section p.text-lg {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-section .flex.flex-col.sm\\:flex-row.gap-4 {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .hero-section a {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+}
