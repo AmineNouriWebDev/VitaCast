@@ -1,99 +1,96 @@
-// Initialiser AOS lib
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
-
-// Gérer le menu mobile
-document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    const icon = this.querySelector('i');
-
-    // Toggle menu
-    menu.classList.toggle('hidden');
-
-    // Changer l'icône
-    if (menu.classList.contains('hidden')) {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    } else {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    }
-});
-
-// Fermer le menu mobile quand on clique sur un lien
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.add('hidden');
-        document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
-        document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
-    });
-});
-
-// Gérer le scroll pour ajouter une ombre à la navbar
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 10) {
-        header.style.boxShadow = '0 10px 40px rgba(168, 85, 247, 0.3)';
-    } else {
-        header.style.boxShadow = 'none';
-    }
-});
-
-
-
-if (document.getElementById('devis-form')) {
-    document.getElementById('devis-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Votre demande de devis a été envoyée avec succès! Notre équipe commerciale vous contactera rapidement.');
-        this.reset();
-    });
-}
-
-// Animation des particules supplémentaires
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDelay = Math.random() * 10 + 's';
-    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+// script.js - Version mise à jour pour VITA CAST
+document.addEventListener('DOMContentLoaded', function() {
     
-    const particlesContainer = document.querySelector('.particles');
-    if (particlesContainer) {
-        particlesContainer.appendChild(particle);
+    // ========== GESTION DU MENU MOBILE ==========
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (mobileMenuBtn && mobileNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileNav.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars';
+            } else {
+                icon.className = 'fas fa-times';
+            }
+        });
         
-        setTimeout(() => particle.remove(), 20000);
+        // Fermer le menu en cliquant sur un lien
+        document.querySelectorAll('#mobileNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+            });
+        });
     }
-}
-
-// Créer des particules périodiquement si on a un conteneur de particules
-if (document.querySelector('.particles')) {
-    setInterval(createParticle, 2000);
-}
-// Optimisation pour mobile
-function optimizeForMobile() {
-  const isMobile = window.innerWidth <= 768;
-  
-  if (isMobile) {
-    // Réduire les animations sur mobile
-    AOS.init({
-      duration: 500,
-      once: true,
-      offset: 50,
-      disable: function() {
-        return window.innerWidth < 768;
-      }
+    
+    // ========== OMBRE SUR LE HEADER AU SCROLL ==========
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (header) {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 10px 30px rgba(10, 2, 15, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(10, 2, 15, 0.1)';
+            }
+        }
     });
     
-    // Désactiver certaines animations lourdes
-    document.querySelectorAll('.float').forEach(el => {
-      el.style.animation = 'none';
+    // ========== GESTION DU FORMULAIRE DE DEVIS ==========
+    const devisForm = document.getElementById('devis-form');
+    if (devisForm) {
+        devisForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre demande de devis a été envoyée avec succès ! Notre équipe commerciale vous contactera rapidement.');
+            this.reset();
+        });
+    }
+    
+    // ========== ANIMATION DES CARTES AU HOVER ==========
+    const cards = document.querySelectorAll('.avantage-card, .product-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
     });
-  }
-}
-
-// Exécuter au chargement et au redimensionnement
-window.addEventListener('load', optimizeForMobile);
-window.addEventListener('resize', optimizeForMobile);
+    
+    // ========== OPTIMISATION MOBILE ==========
+    function optimizeForMobile() {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Désactiver certaines animations lourdes sur mobile
+            document.querySelectorAll('.float-animation').forEach(el => {
+                el.style.animation = 'none';
+            });
+        }
+    }
+    
+    // Exécuter au chargement et au redimensionnement
+    optimizeForMobile();
+    window.addEventListener('resize', optimizeForMobile);
+    
+    // ========== SCROLL LISSE POUR LES ANCRES ==========
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href !== '#' && href.startsWith('#') && document.querySelector(href)) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
