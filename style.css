@@ -490,3 +490,126 @@ body {
         padding-bottom: 0.75rem !important;
     }
 }
+/* ========== GALERIE PRODUITS ========== */
+
+.product-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 250px;
+    background: var(--gris-clair);
+}
+
+.product-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(116, 58, 150, 0.15);
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(10, 2, 15, 0.7));
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-gallery-item:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-number {
+    background: var(--violet-clair);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-gallery-item {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-gallery-item {
+        height: 160px;
+    }
+}
+
+/* Animation pour les images */
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-gallery-item {
+    animation: fadeInGallery 0.6s ease forwards;
+}
+
+/* Délais d'animation pour chaque élément */
+.product-gallery-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-gallery-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-gallery-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.product-gallery-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.product-gallery-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.product-gallery-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.product-gallery-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.product-gallery-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
