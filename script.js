@@ -1,4 +1,26 @@
-// script.js - Version VITA CAST - CORRIGÉ
+// ========== FORCER HTTPS ==========
+if (window.location.protocol === 'http:' && window.location.hostname === 'vita-cast.com.tn') {
+    window.location.href = window.location.href.replace('http:', 'https:');
+}
+
+if (window.location.hostname === 'www.vita-cast.com.tn') {
+    window.location.href = window.location.href.replace('www.vita-cast.com.tn', 'vita-cast.com.tn');
+}
+// ========== GESTION DES ERREURS 404 ==========
+document.addEventListener('DOMContentLoaded', function() {
+    // Vérifier si la page actuelle n'existe pas (simulation)
+    const currentPath = window.location.pathname;
+    const validPages = ['/', '/index.html', '/about.html', '/products.html', '/contact.html'];
+    
+    if (!validPages.includes(currentPath) && !currentPath.includes('#')) {
+        // Rediriger vers l'accueil après 2 secondes
+        setTimeout(function() {
+            window.location.href = 'https://vita-cast.com.tn/';
+        }, 2000);
+    }
+});
+
+// script.js - Version VITA CAST 
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========== GESTION DU MENU MOBILE ==========
