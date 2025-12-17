@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - VITA CAST - Orthopedic Solutions</title>
+    <link rel="icon" href="../images/vc.ico" sizes="any" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      :root {
+        --violet-fonce: #0a020f;
+        --violet-clair: #743a96;
+        --violet-moyen: #3d1a5c;
+        --violet-pale: #f5f0ff;
+        --blanc: #ffffff;
+      }
+      .table-header {
+        background-color: #f5f0ff;
+        color: #3d1a5c;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-700">
+    <header class="bg-[#0a020f] fixed w-full top-0 z-50 shadow-lg">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center h-16">
+          <div class="logo-container flex items-center h-full">
+            <a href="index.html">
+              <img
+              src="../images/logo3.png"
+              alt="VITA CAST"
+              class="max-h-14 w-32 md:w-48 object-contain"
+            />
+          </div>
+
+          <nav class="nav-main hidden lg:block">
+            <ul class="flex items-center space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide active:text-[#a78bfa]"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >PRODUCTS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >CONTACT</a
+                >
+              </li>
+              <li class="flex items-center ml-2">
+                <a
+                  href="contact.html#devis"
+                  class="bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-4 py-2 rounded-full font-bold uppercase text-sm tracking-wide transition-all duration-300"
+                >
+                  <i class="fas fa-paper-plane mr-2"></i> FREE QUOTE
+                </a>
+              </li>
+              <li class="ml-2 border-l border-white/20 pl-3">
+                <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                  <img src="../images/flags/fr.png" alt="Français" class="w-6 h-6 rounded-sm">
+                  <span class="text-white text-xs ml-1">FR</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="mobile-menu-btn lg:hidden text-white text-2xl p-2 focus:outline-none"
+            id="mobileMenuBtn"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="nav-mobile hidden lg:hidden bg-[#0a020f] border-t border-gray-800"
+        id="mobileNav"
+      >
+        <div class="container mx-auto px-4 py-4">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >ABOUT</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="block text-[#a78bfa] font-medium uppercase text-center py-2"
+                >PRODUCTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >CONTACT</a
+              >
+            </li>
+            <li class="pt-2">
+              <a
+                href="contact.html#devis"
+                class="block bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide text-center"
+              >
+                <i class="fas fa-paper-plane mr-2"></i> FREE QUOTE
+              </a>
+            </li>
+            <li class="pt-2 border-t border-white/20">
+              <a href="../index.html" class="flex items-center justify-center text-white hover:text-[#a78bfa] py-2">
+                <img src="../images/flags/fr.png" alt="Français" class="w-6 h-6 rounded-sm mr-2">
+                <span class="font-medium">FRANÇAIS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="hero-section relative bg-cover bg-center fade-in mt-20"
+      style="background-image: url('../images/fond-header.png')"
+    >
+      <div class="hero-overlay"></div>
+      <div class="container mx-auto px-4 py-20 relative z-10 text-center">
+        <h1
+          class="text-3xl md:text-5xl font-bold mb-6 text-[#0a020f]"
+          data-aos="fade-up"
+        >
+          OUR <span class="text-[#743a96]">PRODUCTS</span>
+        </h1>
+        <p
+          class="text-[#3d1a5c] text-lg md:text-xl max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Discover our complete range of high-quality orthopedic solutions, designed for healthcare professionals.
+        </p>
+      </div>
+    </section>
+
+    <section id="vita-cast" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-2/3" data-aos="fade-right">
+            <h2 class="text-3xl font-bold text-[#0a020f] mb-2">
+              Orthopedic Casting Tape
+            </h2>
+            <h3 class="text-xl text-[#743a96] font-medium mb-6">
+              Synthetic Orthopedic Bandage
+            </h3>
+
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Synthetic orthopedic bandage manufactured from a fiberglass substrate impregnated with activated polyurethane resin. The fabric is stretchable in all directions, making it very comfortable to use and easy to mold.
+            </p>
+
+            <h4 class="font-bold text-[#3d1a5c] mb-4">
+              Key Features:
+            </h4>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i>
+                Air permeable
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i>
+                Superior adhesion
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i>
+                Excellent molding
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i>
+                Moisture resistant
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i>
+                X-ray transparent
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-[#743a96] mr-2"></i> Lightweight and robust
+              </li>
+            </ul>
+
+            <h4 class="font-bold text-[#3d1a5c] mb-4">
+              Size and Color Chart:
+            </h4>
+            <div
+              class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm"
+            >
+              <table class="min-w-full bg-white">
+                <thead class="table-header">
+                  <tr>
+                    <th class="py-3 px-6 text-left font-semibold">Width</th>
+                    <th class="py-3 px-6 text-left font-semibold">Length</th>
+                    <th class="py-3 px-6 text-left font-semibold">Colors</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-6">2" (5.0 cm)</td>
+                    <td class="py-3 px-6">3.6 m</td>
+                    <td class="py-3 px-6 text-sm text-gray-600">
+                      White, Blue, Pink, Orange, Green, Purple
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-6">3" (7.5 cm)</td>
+                    <td class="py-3 px-6">3.6 m</td>
+                    <td class="py-3 px-6 text-sm text-gray-600">
+                      White, Blue, Pink, Orange, Green
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-6">4" (10.0 cm)</td>
+                    <td class="py-3 px-6">3.6 m</td>
+                    <td class="py-3 px-6 text-sm text-gray-600">
+                      White, Blue, Pink, Purple
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-6">5" (12.5 cm)</td>
+                    <td class="py-3 px-6">3.6 m</td>
+                    <td class="py-3 px-6 text-sm text-gray-600">
+                      White, Blue, Green
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3" data-aos="fade-left">
+            <div
+              class="bg-[#f5f0ff] p-6 rounded-2xl border border-gray-100 mb-6"
+            >
+              <h4 class="font-bold text-[#0a020f] mb-4 text-center">
+                PERFORMANCE
+              </h4>
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                  <span class="block text-3xl font-bold text-[#743a96]">4</span>
+                  <span class="text-xs text-gray-500 uppercase font-semibold"
+                    >Min. Setting</span
+                  >
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm">
+                  <span class="block text-3xl font-bold text-[#3d1a5c]"
+                    >20</span
+                  >
+                  <span class="text-xs text-gray-500 uppercase font-semibold"
+                    >Min. Load</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm"
+            >
+              <h4 class="font-bold text-[#0a020f] mb-4">Instructions for Use</h4>
+              <ol
+                class="space-y-4 text-sm text-gray-600 relative border-l-2 border-gray-100 ml-3 pl-5"
+              >
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-0 w-6 h-6 bg-[#743a96] text-white rounded-full flex items-center justify-center text-xs font-bold"
+                    >1</span
+                  >
+                  Wear medical gloves.
+                </li>
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-0 w-6 h-6 bg-[#743a96] text-white rounded-full flex items-center justify-center text-xs font-bold"
+                    >2</span
+                  >
+                  Immerse in water (20-25°C) for 10 sec.
+                </li>
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-0 w-6 h-6 bg-[#743a96] text-white rounded-full flex items-center justify-center text-xs font-bold"
+                    >3</span
+                  >
+                  Apply in spiral (2-3 layers max).
+                </li>
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-0 w-6 h-6 bg-[#743a96] text-white rounded-full flex items-center justify-center text-xs font-bold"
+                    >4</span
+                  >
+                  Mold and let dry for 5 min.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jersey-fabric" class="py-16 bg-[#f5f0ff]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row-reverse gap-12">
+          <div class="lg:w-2/3" data-aos="fade-left">
+            <h2 class="text-3xl font-bold text-[#0a020f] mb-2">
+              JERSEY FABRIC
+            </h2>
+            <h3 class="text-xl text-[#743a96] font-medium mb-6">
+              Antibacterial Cotton Protection
+            </h3>
+
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Jersey Fabric is the first layer applied when placing a medical cast. Designed to evacuate perspiration, it protects the skin under resins, splints and synthetic bandages.
+            </p>
+
+            <h4 class="font-bold text-[#3d1a5c] mb-4">
+              Why Choose Our Jersey?
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-start"
+              >
+                <i class="fas fa-leaf text-[#743a96] mt-1 mr-3"></i>
+                <div>
+                  <h5 class="font-bold text-sm">100% Cotton</h5>
+                  <p class="text-xs text-gray-500">
+                    Natural softness and maximum comfort.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-start"
+              >
+                <i class="fas fa-shield-virus text-[#743a96] mt-1 mr-3"></i>
+                <div>
+                  <h5 class="font-bold text-sm">Antibacterial</h5>
+                  <p class="text-xs text-gray-500">
+                    Enhanced hygiene under the cast.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-start"
+              >
+                <i class="fas fa-wind text-[#743a96] mt-1 mr-3"></i>
+                <div>
+                  <h5 class="font-bold text-sm">Breathable</h5>
+                  <p class="text-xs text-gray-500">
+                    Facilitates air circulation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="font-bold text-[#3d1a5c] mb-4">Available Sizes:</h4>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="bg-white border border-[#743a96] text-[#743a96] px-4 py-2 rounded-full text-sm font-semibold"
+                >5 cm (Size 2)</span
+              >
+              <span
+                class="bg-white border border-[#743a96] text-[#743a96] px-4 py-2 rounded-full text-sm font-semibold"
+                >7.5 cm (Size 3)</span
+              >
+              <span
+                class="bg-white border border-[#743a96] text-[#743a96] px-4 py-2 rounded-full text-sm font-semibold"
+                >10 cm (Size 4)</span
+              >
+              <span
+                class="bg-white border border-[#743a96] text-[#743a96] px-4 py-2 rounded-full text-sm font-semibold"
+                >12.5 cm (Size 5)</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="lg:w-1/3 flex items-center justify-center"
+            data-aos="fade-right"
+          >
+            <div
+              class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 w-full text-center"
+            >
+              <i class="fas fa-layer-group text-[#743a96] text-6xl mb-4"></i>
+              <h4 class="font-bold text-gray-800">Patient Comfort</h4>
+              <p class="text-sm text-gray-500 mt-2">
+                Reduces itching and unpleasant odors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie-produits" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#0a020f] mb-4">
+            PRODUCT <span class="text-[#743a96]">GALLERY</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover our products in images. Each bandage is designed with precision to offer the best comfort and performance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/1.jpeg" 
+                alt="VITA CAST Product 1" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/2.jpeg" 
+                alt="VITA CAST Product 2" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/3.jpeg" 
+                alt="VITA CAST Product 3" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/5.jpeg" 
+                alt="VITA CAST Product 5" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/6.jpeg" 
+                alt="VITA CAST Product 6" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="product-gallery-item group">
+            <div class="product-image-wrapper">
+              <img 
+                src="../images/produits/7.jpeg" 
+                alt="VITA CAST Product 7" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+          <p class="text-gray-600 italic">
+            All our products are manufactured according to ISO 9001:2023 standards for optimal quality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-16 bg-gradient-to-br from-[#0a020f] to-[#3d1a5c] text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">NEED SAMPLES?</h2>
+        <p class="mb-8 opacity-90 max-w-2xl mx-auto">
+          Contact us to test the quality of our products before ordering.
+        </p>
+        <a
+          href="contact.html#devis"
+          class="inline-block bg-white text-[#0a020f] hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-all"
+        >
+          REQUEST A QUOTE
+        </a>
+      </div>
+    </section>
+
+ <footer class="bg-[#0a020f] pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"
+        >
+          <div class="footer-col">
+            <img
+              src="../images/logo3.png"
+              alt="VITA CAST"
+              class="h-10 mb-6 invert brightness-0"
+            />
+            <p class="text-gray-300 mb-6">
+              Manufacturer of high-quality synthetic orthopedic bandages, ISO 9001 certified.
+            </p>
+            <div
+              class="inline-flex items-center bg-white/10 px-4 py-2 rounded-lg"
+            >
+              <i class="fas fa-certificate text-[#a78bfa] mr-3"></i>
+              <span class="text-[#a78bfa] font-semibold"
+                >Certified ISO 9001:2023</span
+              >
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">QUICK LINKS</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">PRODUCTS</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="products.html#vita-cast"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Orthopedic Casting Tape</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#jersey-fabric"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Jersey Fabric</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">CONTACT</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-[#a78bfa] mt-1 mr-3"></i>
+                <span class="text-gray-300"
+                  >Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse,
+                  Tunisia</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">(+216) 70 147 479</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">contact@vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-headset text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">assistance@Vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-user-tie text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">manager@vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-handshake text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">commercial@vita-cast.com.tn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom pt-8 border-t border-white/10 text-center">
+          <p class="text-gray-400 text-sm">
+            &copy; Copyright VITA CAST 2025. All rights reserved. | Tax ID: 1678042/F
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - VITA CAST - Medical Excellence</title>
+    <link rel="icon" href="../images/vc.ico" sizes="any" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      :root {
+        --violet-fonce: #0a020f;
+        --violet-clair: #743a96;
+        --violet-moyen: #3d1a5c;
+        --violet-pale: #f5f0ff;
+        --blanc: #ffffff;
+        --gris-fonce: #333333;
+        --gris-moyen: #666666;
+        --gris-clair: #f8f8f8;
+        --bordure: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-700">
+    <header class="bg-[#0a020f] fixed w-full top-0 z-50 shadow-lg">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center h-16">
+          <div class="logo-container flex items-center h-full">
+            <a href="index.html">
+              <img
+                src="../images/logo3.png"
+                alt="VITA CAST"
+                class="max-h-14 w-32 md:w-48 object-contain"
+              />
+            </a>
+          </div>
+
+          <nav class="nav-main hidden lg:block">
+            <ul class="flex items-center space-x-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide active:text-[#a78bfa]"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >PRODUCTS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-white hover:text-[#a78bfa] font-medium uppercase text-sm tracking-wide"
+                  >CONTACT</a
+                >
+              </li>
+              <li class="flex items-center ml-2">
+                <a
+                  href="contact.html#devis"
+                  class="bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-4 py-2 rounded-full font-bold uppercase text-sm tracking-wide transition-all duration-300"
+                >
+                  <i class="fas fa-paper-plane mr-2"></i> FREE QUOTE
+                </a>
+              </li>
+              <li class="ml-2 border-l border-white/20 pl-3">
+                <a
+                  href="../index.html"
+                  class="flex items-center hover:opacity-80 transition-opacity"
+                >
+                  <img
+                    src="../images/flags/fr.png"
+                    alt="Français"
+                    class="w-6 h-6 rounded-sm"
+                  />
+                  <span class="text-white text-xs ml-1">FR</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="mobile-menu-btn lg:hidden text-white text-2xl p-2 focus:outline-none"
+            id="mobileMenuBtn"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        class="nav-mobile hidden lg:hidden bg-[#0a020f] border-t border-gray-800"
+        id="mobileNav"
+      >
+        <div class="container mx-auto px-4 py-4">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="block text-[#a78bfa] font-medium uppercase text-center py-2"
+                >ABOUT</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >PRODUCTS</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                >CONTACT</a
+              >
+            </li>
+            <li class="pt-2">
+              <a
+                href="contact.html#devis"
+                class="block bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide text-center transition-all duration-300"
+              >
+                <i class="fas fa-paper-plane mr-2"></i> FREE QUOTE
+              </a>
+            </li>
+            <li class="pt-2 border-t border-white/20">
+              <a
+                href="../index.html"
+                class="flex items-center justify-center text-white hover:text-[#a78bfa] py-2"
+              >
+                <img
+                  src="../images/flags/fr.png"
+                  alt="Français"
+                  class="w-6 h-6 rounded-sm mr-2"
+                />
+                <span class="font-medium">FRANÇAIS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="hero-section relative bg-cover bg-center fade-in mt-20"
+      style="background-image: url('../images/fond-header.png')"
+    >
+      <div class="hero-overlay"></div>
+      <div class="container mx-auto px-4 py-20 relative z-10 text-center">
+        <h1
+          class="text-3xl md:text-5xl font-bold mb-6 text-[#0a020f]"
+          data-aos="fade-up"
+        >
+          ABOUT <span class="text-[#743a96]">VITA CAST</span>
+        </h1>
+        <p
+          class="text-[#3d1a5c] text-lg md:text-xl max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          A major player in the medical industry specializing in high-quality
+          orthopedic products and technological innovation.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#0a020f]">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+              OUR <span class="text-[#743a96]">MISSION</span>
+            </h2>
+
+            <div
+              class="space-y-4 text-gray-300 leading-relaxed text-justify text-lg"
+            >
+              <p>
+                Vita Cast positions itself as a major player in the medical
+                industry, specializing in the production of American resin
+                medical cast and orthopedic medical products.
+              </p>
+              <p>
+                Inspired by the Korean model, our leading factory excels in the
+                manufacturing of resin medical casts, embodying exceptional
+                quality and innovation to provide its clients with reliable and
+                effective medical solutions.
+              </p>
+              <p>
+                In 2023, our commitment to rigorous quality standards was
+                officially recognized by obtaining the
+                <strong class="text-[#743a96]">ISO 9001:2023</strong>
+                certification.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative mt-8 lg:mt-0" data-aos="fade-left">
+            <div
+              class="rounded-2xl shadow-2xl overflow-hidden border-2 border-[#743a96] bg-gray-800"
+            >
+              <img
+                src="../images/siege.jpeg"
+                alt="VITA CAST Headquarters"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out"
+                style="min-height: 350px"
+              />
+
+              <div
+                class="absolute bottom-0 left-0 bg-[#743a96] text-white px-6 py-3 rounded-tr-xl font-bold text-sm shadow-lg"
+              >
+                <i class="fas fa-certificate mr-2"></i> CERTIFIED FACTORY
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-[#f5f0ff]">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-[#0a020f] mb-4">
+            INTERNATIONAL <span class="text-[#743a96]">PRESENCE</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We are proud to contribute to the advancement of healthcare in
+            Tunisia and to export our expertise worldwide.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://flagcdn.com/w320/nl.png"
+              alt="Netherlands"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">NETHERLANDS</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <img
+              src="https://flagcdn.com/w320/tr.png"
+              alt="Turkey"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">TURKEY</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://flagcdn.com/w320/ma.png"
+              alt="Morocco"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">MOROCCO</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <img
+              src="https://flagcdn.com/w320/dz.png"
+              alt="Algeria"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">ALGERIA</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="https://flagcdn.com/w320/tn.png"
+              alt="Tunisia"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">TUNISIA</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
+            <img
+              src="https://flagcdn.com/w320/jo.png"
+              alt="Jordan"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">JORDAN</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="https://flagcdn.com/w320/eg.png"
+              alt="Egypt"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">EGYPT</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="450"
+          >
+            <img
+              src="https://flagcdn.com/w320/ae.png"
+              alt="United Arab Emirates"
+              class="w-16 h-auto mx-auto mb-4 rounded shadow-sm border border-gray-200"
+            />
+            <h4 class="font-bold text-[#0a020f]">ABU DHABI</h4>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="zoom-in">
+          <p class="text-[#3d1a5c] font-medium max-w-3xl mx-auto italic">
+            "Thanks to our expertise and commitment to quality, we have
+            established strong partnerships in 8 countries around the world."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-16 bg-gradient-to-br from-[#0a020f] to-[#3d1a5c] text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">PARTNER OF YOUR SUCCESS</h2>
+        <p class="mb-8 opacity-90 max-w-2xl mx-auto">
+          Join our many international partners and benefit from our expertise in
+          high-quality orthopedic products.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="contact.html"
+            class="bg-white text-[#0a020f] hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition-all"
+          >
+            CONTACT US
+          </a>
+          <a
+            href="contact.html#devis"
+            class="border-2 border-white text-white hover:bg-white hover:text-[#0a020f] px-8 py-3 rounded-full font-bold transition-all"
+          >
+            REQUEST A QUOTE
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#0a020f] pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"
+        >
+          <div class="footer-col">
+            <img
+              src="../images/logo3.png"
+              alt="VITA CAST"
+              class="h-10 mb-6 invert brightness-0"
+            />
+            <p class="text-gray-300 mb-6">
+              Manufacturer of high-quality synthetic orthopedic bandages, ISO
+              9001 certified.
+            </p>
+            <div
+              class="inline-flex items-center bg-white/10 px-4 py-2 rounded-lg"
+            >
+              <i class="fas fa-certificate text-[#a78bfa] mr-3"></i>
+              <span class="text-[#a78bfa] font-semibold"
+                >Certified ISO 9001:2023</span
+              >
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">QUICK LINKS</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">PRODUCTS</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="products.html#vita-cast"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Orthopedic Casting Tape</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#jersey-fabric"
+                  class="text-gray-300 hover:text-[#a78bfa] transition-colors"
+                  >Jersey Fabric</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="text-[#a78bfa] text-lg font-bold mb-6">CONTACT</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-[#a78bfa] mt-1 mr-3"></i>
+                <span class="text-gray-300"
+                  >Rue Hmada Kebira-Rte. Tunis-Akouda 4022 / Sousse,
+                  Tunisia</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">(+216) 70 147 479</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">contact@vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-headset text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">assistance@Vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-user-tie text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">manager@vita-cast.com.tn</span>
+              </li>
+
+              <li class="flex items-center">
+                <i class="fas fa-handshake text-[#a78bfa] mr-3"></i>
+                <span class="text-gray-300">commercial@vita-cast.com.tn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom pt-8 border-t border-white/10 text-center">
+          <p class="text-gray-400 text-sm">
+            &copy; Copyright VITA CAST 2025. All rights reserved. | Tax ID:
+            1678042/F
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>
