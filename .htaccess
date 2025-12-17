@@ -1,0 +1,38 @@
+# Activation du moteur de réécriture
+RewriteEngine On
+
+# Redirection automatique basée sur la langue du navigateur
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ /en/index.html [L,R=302]
+
+# Pages françaises
+RewriteRule ^accueil$ /index.html [L]
+RewriteRule ^a-propos$ /about.html [L]
+RewriteRule ^produits$ /products.html [L]
+RewriteRule ^contact$ /contact.html [L]
+
+# Pages anglaises
+RewriteRule ^en/home$ /en/index.html [L]
+RewriteRule ^en/about$ /en/about.html [L]
+RewriteRule ^en/products$ /en/products.html [L]
+RewriteRule ^en/contact$ /en/contact.html [L]
+
+# Redirection des erreurs 404 vers l'accueil
+ErrorDocument 404 /index.html
+
+# Compression GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+
+# Cache des fichiers statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
