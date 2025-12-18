@@ -317,7 +317,26 @@
                 besoins.
               </p>
 
-              <form id="devis-form" class="space-y-6">
+              <form
+                id="devis-form"
+                class="space-y-6"
+                action="https://formspree.io/f/xwvekllw"
+                method="POST"
+              >
+                <!-- Ajouter ces champs cachés au début du formulaire -->
+                <input type="hidden" name="_language" value="fr" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Nouvelle demande de devis - VITA CAST"
+                />
+                <input
+                  type="hidden"
+                  name="_replyto"
+                  value="contact@vita-cast.com.tn"
+                />
+
+                <!-- Modifier les champs existants -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -326,6 +345,7 @@
                     >
                     <input
                       type="text"
+                      name="nom_complet"
                       required
                       class="form-input"
                       placeholder="Votre nom"
@@ -338,6 +358,7 @@
                     >
                     <input
                       type="email"
+                      name="email"
                       required
                       class="form-input"
                       placeholder="votre@email.com"
@@ -353,6 +374,7 @@
                     >
                     <input
                       type="text"
+                      name="entreprise"
                       class="form-input"
                       placeholder="Nom de l'établissement"
                     />
@@ -364,6 +386,7 @@
                     >
                     <input
                       type="tel"
+                      name="telephone"
                       required
                       class="form-input"
                       placeholder="Votre numéro"
@@ -382,6 +405,8 @@
                       <input
                         type="checkbox"
                         id="prod1"
+                        name="produits[]"
+                        value="Ruban de moulage orthopédique (Synthétique)"
                         class="w-4 h-4 text-[#743a96] rounded border-gray-300 focus:ring-[#743a96]"
                       />
                       <label for="prod1" class="ml-2 text-gray-700"
@@ -392,6 +417,8 @@
                       <input
                         type="checkbox"
                         id="prod2"
+                        name="produits[]"
+                        value="Jersey Fabric (Protection)"
                         class="w-4 h-4 text-[#743a96] rounded border-gray-300 focus:ring-[#743a96]"
                       />
                       <label for="prod2" class="ml-2 text-gray-700"
@@ -407,6 +434,7 @@
                   >
                   <textarea
                     rows="4"
+                    name="message"
                     class="form-input"
                     placeholder="Précisez les quantités souhaitées..."
                   ></textarea>
@@ -568,5 +596,67 @@
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
     <script src="script.js"></script>
+    <script>
+      document
+        .getElementById("devis-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+
+          // Désactiver le bouton et afficher un indicateur de chargement
+          submitButton.disabled = true;
+          submitButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin mr-2"></i> Envoi en cours...';
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              // Message de succès
+              submitButton.innerHTML =
+                '<i class="fas fa-check mr-2"></i> Envoyé !';
+              submitButton.classList.remove("from-[#743a96]", "to-[#3d1a5c]");
+              submitButton.classList.add("from-green-500", "to-green-600");
+
+              // Réinitialiser le formulaire
+              setTimeout(() => {
+                form.reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                submitButton.classList.remove("from-green-500", "to-green-600");
+                submitButton.classList.add("from-[#743a96]", "to-[#3d1a5c]");
+
+                // Afficher une alerte (optionnel)
+                alert("Merci ! Votre demande a été envoyée avec succès.");
+              }, 3000);
+            } else {
+              throw new Error("Erreur lors de l'envoi");
+            }
+          } catch (error) {
+            // Message d'erreur
+            submitButton.innerHTML =
+              '<i class="fas fa-exclamation-triangle mr-2"></i> Erreur';
+            submitButton.classList.remove("from-[#743a96]", "to-[#3d1a5c]");
+            submitButton.classList.add("from-red-500", "to-red-600");
+
+            setTimeout(() => {
+              submitButton.innerHTML = originalText;
+              submitButton.disabled = false;
+              submitButton.classList.remove("from-red-500", "to-red-600");
+              submitButton.classList.add("from-[#743a96]", "to-[#3d1a5c]");
+              alert("Une erreur est survenue. Veuillez réessayer.");
+            }, 3000);
+          }
+        });
+    </script>
   </body>
 </html>
