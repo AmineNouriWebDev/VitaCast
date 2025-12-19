@@ -45,21 +45,26 @@
         background-color: #fff;
       }
     </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body class="font-sans text-gray-700">
     <header class="bg-[#0a020f] fixed w-full top-0 z-50 shadow-lg">
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
           <div class="logo-container flex items-center h-full">
-            <a href="index.html">
-              <img
-                src="images/logo3.png"
-                alt="VITA CAST"
-                class="max-h-14 w-32 md:w-48 object-contain"
-              />
-            </a>
+            <img
+              src="images/logo3.png"
+              alt="VITA CAST"
+              class="max-h-14 w-32 md:w-48 object-contain"
+            />
           </div>
 
+          <!-- Navigation desktop -->
           <nav class="nav-main hidden lg:block">
             <ul class="flex items-center space-x-6">
               <li>
@@ -98,16 +103,49 @@
                   <i class="fas fa-paper-plane mr-2"></i> DEVIS GRATUIT
                 </a>
               </li>
+              <li class="ml-2 border-l border-white/20 pl-3">
+                <a
+                  href="en/index.html"
+                  class="flex items-center hover:opacity-80 transition-opacity"
+                >
+                  <img
+                    src="images/flags/gb.png"
+                    alt="English"
+                    class="w-6 h-6 rounded-sm"
+                  />
+                  <span class="text-white text-xs ml-1">EN</span>
+                </a>
+              </li>
             </ul>
           </nav>
-          <button
-            class="mobile-menu-btn lg:hidden text-white text-2xl p-2 focus:outline-none"
-            id="mobileMenuBtn"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+
+          <!-- Drapeau mobile + Burger -->
+          <div class="flex items-center lg:hidden">
+            <!-- Drapeau anglais pour mobile/tablette -->
+            <a
+              href="en/index.html"
+              class="flex items-center hover:opacity-80 transition-opacity mr-4"
+            >
+              <img
+                src="images/flags/gb.png"
+                alt="English"
+                class="w-6 h-6 rounded-sm"
+              />
+              <span class="text-white text-xs ml-1 hidden sm:inline">EN</span>
+            </a>
+            <!-- Bouton burger -->
+            <button
+              class="mobile-menu-btn text-white text-2xl p-2 focus:outline-none"
+              id="mobileMenuBtn"
+              aria-label="Menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- Menu déroulant mobile -->
       <nav
         class="nav-mobile hidden lg:hidden bg-[#0a020f] border-t border-gray-800"
         id="mobileNav"
@@ -117,7 +155,7 @@
             <li>
               <a
                 href="index.html"
-                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2 active:text-[#a78bfa]"
                 >ACCUEIL</a
               >
             </li>
@@ -138,16 +176,29 @@
             <li>
               <a
                 href="contact.html"
-                class="block text-[#a78bfa] font-medium uppercase text-center py-2"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
                 >CONTACT</a
               >
             </li>
             <li class="pt-2">
               <a
                 href="contact.html#devis"
-                class="block bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide text-center"
+                class="block bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide text-center transition-all duration-300"
               >
                 <i class="fas fa-paper-plane mr-2"></i> DEVIS GRATUIT
+              </a>
+            </li>
+            <li class="pt-2 border-t border-white/20">
+              <a
+                href="en/index.html"
+                class="flex items-center justify-center text-white hover:text-[#a78bfa] py-2"
+              >
+                <img
+                  src="images/flags/gb.png"
+                  alt="English"
+                  class="w-6 h-6 rounded-sm mr-2"
+                />
+                <span class="font-medium">ENGLISH</span>
               </a>
             </li>
           </ul>
@@ -323,20 +374,15 @@
                 action="https://formspree.io/f/xwvekllw"
                 method="POST"
               >
-                <!-- Ajouter ces champs cachés au début du formulaire -->
+                <!-- Champs cachés pour Formspree -->
                 <input type="hidden" name="_language" value="fr" />
                 <input
                   type="hidden"
                   name="_subject"
                   value="Nouvelle demande de devis - VITA CAST"
                 />
-                <input
-                  type="hidden"
-                  name="_replyto"
-                  value="contact@vita-cast.com.tn"
-                />
+                <input type="text" name="_gotcha" style="display: none" />
 
-                <!-- Modifier les champs existants -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
@@ -443,6 +489,7 @@
                 <div class="text-center pt-4">
                   <button
                     type="submit"
+                    id="submit-btn"
                     class="bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-10 py-4 rounded-full font-bold shadow-md hover:shadow-lg transition-all w-full md:w-auto"
                   >
                     ENVOYER LA DEMANDE
@@ -591,72 +638,141 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true, offset: 100 });
     </script>
     <script src="script.js"></script>
+    
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
     <script>
-      document
-        .getElementById("devis-form")
-        .addEventListener("submit", async function (e) {
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('devis-form');
+        const submitButton = document.getElementById('submit-btn');
+        
+        if (!form || !submitButton) return;
+        
+        // IMPORTANT: Supprimer tout autre gestionnaire de soumission
+        form.removeEventListener('submit', handleSubmit);
+        
+        form.addEventListener('submit', function(e) {
           e.preventDefault();
-
-          const form = e.target;
-          const submitButton = form.querySelector('button[type="submit"]');
+          handleSubmit(e);
+        });
+        
+        function handleSubmit(e) {
+          e.preventDefault();
+          
           const originalText = submitButton.innerHTML;
-
+          
           // Désactiver le bouton et afficher un indicateur de chargement
           submitButton.disabled = true;
           submitButton.innerHTML =
             '<i class="fas fa-spinner fa-spin mr-2"></i> Envoi en cours...';
-
-          try {
-            const response = await fetch(form.action, {
-              method: "POST",
-              body: new FormData(form),
-              headers: {
-                Accept: "application/json",
-              },
-            });
-
+          
+          // Créer un nouvel objet FormData
+          const formData = new FormData(form);
+          
+          // Ajouter les champs manquants pour Formspree
+          formData.append('_language', 'fr');
+          formData.append('_subject', 'Nouvelle demande de devis - VITA CAST');
+          
+          // Envoyer les données à Formspree
+          fetch('https://formspree.io/f/xwvekllw', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
             if (response.ok) {
-              // Message de succès
+              // Message de succès avec Toastify
+              Toastify({
+                text: "✅ Votre demande a été envoyée avec succès ! Notre équipe vous contactera rapidement.",
+                duration: 5000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                stopOnFocus: true,
+                className: "toastify-success",
+                onClick: function() {}
+              }).showToast();
+              
+              // Mettre à jour le bouton
               submitButton.innerHTML =
                 '<i class="fas fa-check mr-2"></i> Envoyé !';
               submitButton.classList.remove("from-[#743a96]", "to-[#3d1a5c]");
               submitButton.classList.add("from-green-500", "to-green-600");
-
-              // Réinitialiser le formulaire
+              
+              // Réinitialiser le formulaire après 2 secondes
               setTimeout(() => {
                 form.reset();
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
                 submitButton.classList.remove("from-green-500", "to-green-600");
                 submitButton.classList.add("from-[#743a96]", "to-[#3d1a5c]");
-
-                // Afficher une alerte (optionnel)
-                alert("Merci ! Votre demande a été envoyée avec succès.");
-              }, 3000);
+              }, 2000);
             } else {
               throw new Error("Erreur lors de l'envoi");
             }
-          } catch (error) {
-            // Message d'erreur
+          })
+          .catch(error => {
+            // Message d'erreur avec Toastify
+            Toastify({
+              text: "❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
+              duration: 5000,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+              stopOnFocus: true,
+              className: "toastify-error",
+              onClick: function() {}
+            }).showToast();
+            
+            // Mettre à jour le bouton
             submitButton.innerHTML =
               '<i class="fas fa-exclamation-triangle mr-2"></i> Erreur';
             submitButton.classList.remove("from-[#743a96]", "to-[#3d1a5c]");
             submitButton.classList.add("from-red-500", "to-red-600");
-
+            
+            // Restaurer le bouton après 3 secondes
             setTimeout(() => {
               submitButton.innerHTML = originalText;
               submitButton.disabled = false;
               submitButton.classList.remove("from-red-500", "to-red-600");
               submitButton.classList.add("from-[#743a96]", "to-[#3d1a5c]");
-              alert("Une erreur est survenue. Veuillez réessayer.");
             }, 3000);
-          }
+          });
+        }
+        
+        // Validation en temps réel
+        const inputs = form.querySelectorAll(
+          "input[required], textarea[required]"
+        );
+        
+        inputs.forEach((input) => {
+          input.addEventListener("blur", function () {
+            if (!this.value.trim()) {
+              // Toast d'information pour champ obligatoire
+              Toastify({
+                text: "⚠️ Ce champ est obligatoire",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "linear-gradient(to right, #2193b0, #6dd5ed)",
+                stopOnFocus: true,
+                className: "toastify-info",
+                onClick: function() {}
+              }).showToast();
+            }
+          });
         });
+      });
     </script>
+  </body>
+</html>
   </body>
 </html>

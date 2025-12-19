@@ -39,16 +39,16 @@
     <header class="bg-[#0a020f] fixed w-full top-0 z-50 shadow-lg">
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
           <div class="logo-container flex items-center h-full">
-            <a href="index.html">
-              <img
-                src="images/logo3.png"
-                alt="VITA CAST"
-                class="max-h-14 w-32 md:w-48 object-contain"
-              />
-            </a>
+            <img
+              src="images/logo3.png"
+              alt="VITA CAST"
+              class="max-h-14 w-32 md:w-48 object-contain"
+            />
           </div>
 
+          <!-- Navigation desktop -->
           <nav class="nav-main hidden lg:block">
             <ul class="flex items-center space-x-6">
               <li>
@@ -87,18 +87,49 @@
                   <i class="fas fa-paper-plane mr-2"></i> DEVIS GRATUIT
                 </a>
               </li>
+              <li class="ml-2 border-l border-white/20 pl-3">
+                <a
+                  href="en/index.html"
+                  class="flex items-center hover:opacity-80 transition-opacity"
+                >
+                  <img
+                    src="images/flags/gb.png"
+                    alt="English"
+                    class="w-6 h-6 rounded-sm"
+                  />
+                  <span class="text-white text-xs ml-1">EN</span>
+                </a>
+              </li>
             </ul>
           </nav>
 
-          <button
-            class="mobile-menu-btn lg:hidden text-white text-2xl p-2 focus:outline-none"
-            id="mobileMenuBtn"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+          <!-- Drapeau mobile + Burger -->
+          <div class="flex items-center lg:hidden">
+            <!-- Drapeau anglais pour mobile/tablette -->
+            <a
+              href="en/index.html"
+              class="flex items-center hover:opacity-80 transition-opacity mr-4"
+            >
+              <img
+                src="images/flags/gb.png"
+                alt="English"
+                class="w-6 h-6 rounded-sm"
+              />
+              <span class="text-white text-xs ml-1 hidden sm:inline">EN</span>
+            </a>
+            <!-- Bouton burger -->
+            <button
+              class="mobile-menu-btn text-white text-2xl p-2 focus:outline-none"
+              id="mobileMenuBtn"
+              aria-label="Menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
 
+      <!-- Menu déroulant mobile -->
       <nav
         class="nav-mobile hidden lg:hidden bg-[#0a020f] border-t border-gray-800"
         id="mobileNav"
@@ -108,14 +139,14 @@
             <li>
               <a
                 href="index.html"
-                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2 active:text-[#a78bfa]"
                 >ACCUEIL</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="block text-[#a78bfa] font-medium uppercase text-center py-2"
+                class="block text-white hover:text-[#a78bfa] font-medium uppercase text-center py-2"
                 >À PROPOS</a
               >
             </li>
@@ -139,6 +170,19 @@
                 class="block bg-gradient-to-r from-[#743a96] to-[#3d1a5c] text-white hover:from-[#3d1a5c] hover:to-[#743a96] px-6 py-3 rounded-full font-bold uppercase text-sm tracking-wide text-center transition-all duration-300"
               >
                 <i class="fas fa-paper-plane mr-2"></i> DEVIS GRATUIT
+              </a>
+            </li>
+            <li class="pt-2 border-t border-white/20">
+              <a
+                href="en/index.html"
+                class="flex items-center justify-center text-white hover:text-[#a78bfa] py-2"
+              >
+                <img
+                  src="images/flags/gb.png"
+                  alt="English"
+                  class="w-6 h-6 rounded-sm mr-2"
+                />
+                <span class="font-medium">ENGLISH</span>
               </a>
             </li>
           </ul>

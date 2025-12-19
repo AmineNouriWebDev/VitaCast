@@ -6,19 +6,8 @@ if (window.location.protocol === 'http:' && window.location.hostname === 'vita-c
 if (window.location.hostname === 'www.vita-cast.com.tn') {
     window.location.href = window.location.href.replace('www.vita-cast.com.tn', 'vita-cast.com.tn');
 }
-// ========== GESTION DES ERREURS 404 ==========
-document.addEventListener('DOMContentLoaded', function() {
-    // Vérifier si la page actuelle n'existe pas (simulation)
-    const currentPath = window.location.pathname;
-    const validPages = ['/', '/index.html', '/about.html', '/products.html', '/contact.html'];
-    
-    if (!validPages.includes(currentPath) && !currentPath.includes('#')) {
-        // Rediriger vers l'accueil après 2 secondes
-        setTimeout(function() {
-            window.location.href = 'https://vita-cast.com.tn/';
-        }, 2000);
-    }
-});
+
+
 
 // script.js - Version VITA CAST 
 document.addEventListener('DOMContentLoaded', function() {
@@ -79,15 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ========== GESTION DU FORMULAIRE DE DEVIS ==========
-    const devisForm = document.getElementById('devis-form');
-    if (devisForm) {
-        devisForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Votre demande de devis a été envoyée avec succès ! Notre équipe commerciale vous contactera rapidement.');
-            this.reset();
-        });
-    }
+  
 
     // ========== ANIMATION DES CARTES AU HOVER ==========
     // On vérifie si c'est desktop pour éviter les bugs tactiles
